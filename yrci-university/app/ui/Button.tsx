@@ -1,3 +1,4 @@
+import { useRouter } from 'next/navigation'
 
 interface ButtonProps {
     onClick?: () => void;
@@ -9,7 +10,7 @@ interface ButtonProps {
     return (
       <button
         onClick={onClick}
-        className={`bg-yrci-red text-white font-bold py-2 px-4 rounded ${className}`}
+        className={` text-white font-bold py-2 px-4 rounded ${className}`}
       >
         {children}
       </button>
