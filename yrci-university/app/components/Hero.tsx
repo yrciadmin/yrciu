@@ -13,7 +13,7 @@ const Hero = () => {
                 <h1 className='font-bold sm:text-6xl text-3xl'>Maximize Your Professional Value</h1>
                 <h1 className='font-bold sm:text-6xl text-3xl text-yrci-red mb-8'>with YRCI University</h1>
                 <Paragraph className='mb-8'>Unlock your potential with our tailored training programs for HR professionals. Immerse yourself in a dynamic learning environment featuring self-paced e-learning modules, interactive virtual instructor-led sessions, and collaborative peer learning experiences.</Paragraph>
-                <Button className='self-center w-8/12 text-sm sm:self-start sm:w-fit'>Explore Course Catalog</Button>
+                <Button className='self-center w-8/12 text-sm sm:self-start sm:w-fit bg-yrci-red'>Explore Course Catalog</Button>
             </div>
         </div>
         <div className='hidden sm:block w-2/5 relative'>
