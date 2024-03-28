@@ -88,7 +88,7 @@ const FeaturedCourses = () => {
                             <p>Enroll in our self-guided e-learning course to elevate your understanding of Veterans’ Preference in the Federal hiring process. Gain a comprehensive understanding of its benefits, legal framework, and verification techniques.</p>
                         </div>
                 </div>
-                <Button className="w-[390px] h-10 p-2.5 bg-white hover:bg-yrci-red rounded-lg shadow border border-red-600 justify-center items-center gap-2.5 inline-flex hover:text-white text-yrci-red text-base font-bold uppercase mt-8">Start Learning</Button>
+                <LinkButton  link="https://yrciuniversity.docebosaas.com/learn/courses/90/veterans-preference" className="w-[390px] h-10 p-2.5 bg-white hover:bg-yrci-red rounded-lg shadow border border-red-600 justify-center items-center gap-2.5 inline-flex hover:text-white text-yrci-red text-base font-bold uppercase mt-8">Start Learning</LinkButton>
             </div>
 
             <div className='w-[430] py-8 px-5 bg-white border-2 border-light-gary flex-flex-col rounded-lg h-[612px] m-10'>
