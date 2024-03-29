@@ -1,3 +1,4 @@
+import ContactUs from "./components/ContactUs";
 import FeaturedCourses from "./components/FeaturedCourses";
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
@@ -10,6 +11,7 @@ export default function Home() {
      <SocialProof/>
      <WhyChooseUs/>
      <FeaturedCourses/>
+     {/* <ContactUs/> */}
     </>
     
   );
