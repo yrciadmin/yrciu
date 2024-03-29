@@ -12,7 +12,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "featured-courses": "url('../assets/featured-course-section-bg.png')"
+        "featured-courses": "url('../assets/featured-course-section-bg.png')",
+        "contact-us": "url('../assets/contact-us-section.png')",
       },
       colors: {
         "dark-gray": "#444444",
@@ -26,8 +27,22 @@ const config: Config = {
         "turquise-shadow": "#E6FCFF",
         "yrci-black": "#ce2129",
         "yrci-red": "#ce2129",
-      }
+      },
+      keyframes: {
+        scroll: {
+          from: {
+            transform: 'translateX(0%)'
+          },
+          to: {
+            transform: 'translateX(-50%)'
+          }
+        }
+      },
+      animation: {
+        'scroll-logo': 'scroll 10s infinite linear',
+      },
     },
+   
   },
   plugins: [],
 };

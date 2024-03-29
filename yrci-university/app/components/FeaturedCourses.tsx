@@ -2,14 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 import Course1 from '../../assets/cardImages/couseImage1.png'
 import Heading from '../ui/Typography/Heading'
-import Button from '../ui/Button'
 import LinkButton from '../ui/LinkButton'
 
-
+//TODO: FIX CARDS SO TITLE AND PARAGRAPH LINES UP IN EACH CARD
 const FeaturedCourses = () => {
   return (
-    <section className='bg-featured-courses w-full mt-16 flex flex-col'>
-        <div className='flex justify-center'><Heading className='mb-8 text-4xl self-center'>Featured Courses</Heading></div>
+    <section className='bg-featured-courses bg-center bg-no-repeat w-full mt-16 flex flex-col'>
+        <div className='flex justify-center'><Heading className='mb-8 text-[2.5rem] sm:text-4xl self-center'>Featured Courses</Heading></div>
         
         <div className='flex flex-col sm:flex-row flex-wrap justify-center mt-8'>
 
