@@ -1,4 +1,4 @@
-import { useRouter } from 'next/navigation'
+import { twMerge } from 'tailwind-merge'
 
 interface ButtonProps {
     onClick?: () => void;
@@ -10,7 +10,7 @@ interface ButtonProps {
     return (
       <button
         onClick={onClick}
-        className={` text-white font-bold py-2 px-4 rounded ${className}`}
+        className={twMerge(`font-bold py-2 px-4 rounded w-6/12 sm:w-44, ${className}`)}
       >
         {children}
       </button>

@@ -6,7 +6,7 @@ interface CardProps {
     iconClassName?: string
     children: React.ReactNode
     icon: boolean
-    icon_img: any
+    icon_img?: any
 }
 
 const Card = ({children, className, icon, icon_img, iconClassName}: CardProps) => {
