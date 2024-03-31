@@ -18,6 +18,8 @@ const WhyChooseUs = () => {
                 alt="Why choose use"
                 className='w-full sm:w-2/6'
                 src={WCUImage}
+                height={0}
+                width={0}
             />
             <div className='flex flex-col justify-center items-center sm:block w-full sm:w-1/2 sm:mr-8 mt-8 sm:mt-0'>
                 <Heading className='mb-8 text-5xl'>Why Choose Us</Heading>

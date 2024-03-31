@@ -25,8 +25,9 @@ const Hero = () => {
                 className='mt-8'
                 src={HeroImage}
                 alt="hero-content"
-                width={460}
-                height={637}
+                width={0}
+                height={0}
+                style={{height: '637px', width: '460px'}}
             />
         </div>
     </section>
