@@ -3,6 +3,7 @@ import Image from 'next/image'
 import HeroImage from '../../assets/hero-right-content.png'
 import Metrics from './Metrics'
 import Paragraph from '../ui/Typography/Paragraph'
+import LinkButton from '../ui/LinkButton'
 
 //TODO: CREATE DESIGN FOR MOBILE METRICS SECTION
 const Hero = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
                 <h1 className='font-bold sm:text-6xl text-3xl'>Maximize Your Professional Value</h1>
                 <h1 className='font-bold sm:text-6xl text-3xl text-yrci-red mb-8'>with YRCI University</h1>
                 <Paragraph className='mb-8'>Unlock your potential with our tailored training programs for HR professionals. Immerse yourself in a dynamic learning environment featuring self-paced e-learning modules, interactive virtual instructor-led sessions, and collaborative peer learning experiences.</Paragraph>
-                <Button className='self-center w-8/12 text-sm sm:self-start sm:w-fit bg-yrci-red'>Explore Course Catalog</Button>
+                <LinkButton link='https://yrciuniversity.docebosaas.com/learn' className='text-white self-end w-8/12 text-lg sm:self-start sm:w-fit sm:px-8 bg-yrci-red'>Learn More</LinkButton>
             </div>
         </div>
         <div className='hidden sm:block w-2/5 relative'>
@@ -24,8 +25,9 @@ const Hero = () => {
                 className='mt-8'
                 src={HeroImage}
                 alt="hero-content"
-                width={460}
-                height={637}
+                width={0}
+                height={0}
+                style={{height: '637px', width: '460px'}}
             />
         </div>
     </section>

@@ -14,6 +14,20 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "featured-courses": "url('../assets/featured-course-section-bg.png')",
         "contact-us": "url('../assets/contact-us-section.png')",
+        "instructors": "url('../assets/instructors-bg.png')",
+        "instructors-mobile": "url('../assets/instructors-bg-mobile.png')",
+        "instructors-title": "url('../assets/instructors-mobile.png')",
+        "cody-headshot": "url('../assets/headshots/cody_headshot.jpg')",
+        "dan-headshot": "url('../assets/headshots/dan_headshot.jpg')",
+        "diane-headshot": "url('../assets/headshots/diane_headshot.jpg')",
+        "cris-headshot": "url('../assets/headshots/cris_headshot.jpg')",
+        "tyesha-headshot": "url('../assets/headshots/tyesha_headshot.jpg')",
+
+        "course-1": "url('../assets/cardImages/courseImage1.png')",
+        "course-2": "url('../assets/cardImages/courseImage2.png')",
+        "course-3": "url('../assets/cardImages/courseImage3.png')",
+        "course-4": "url('../assets/cardImages/courseImage4.png')",
+
       },
       colors: {
         "dark-gray": "#444444",
@@ -30,16 +44,16 @@ const config: Config = {
       },
       keyframes: {
         scroll: {
-          from: {
-            transform: 'translateX(0%)'
-          },
-          to: {
-            transform: 'translateX(-50%)'
-          }
+          '0%': {
+            'transform': 'translate(0, 0)'
+        },
+        '100%': {
+            'transform': 'translate(-100%, 0)'
         }
+        },
       },
       animation: {
-        'scroll-logo': 'scroll 10s infinite linear',
+        'scroll-logo': 'scroll 15s linear infinite',
       },
     },
    
