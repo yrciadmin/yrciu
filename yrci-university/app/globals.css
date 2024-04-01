@@ -59,10 +59,3 @@ body {
   width: 150px;
 }
 
-@media screen and (min-width: 768px) {
-  .swiper-button-prev {
-    margin-right: 20rem !important;
-    border: 2px solid red;
-
-  }
-}
