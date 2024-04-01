@@ -28,13 +28,13 @@ const WhyChooseUs = () => {
             </div>
         </div>
             <div className='flex xl:flex md:hidden xl:flex-row flex-col items-center w-full justify-center sm:justify-around mt-8 md:overflow-y-auto xl:overflow-hidden'>
-                <Card icon icon_img={Icon} className='lg: mx-10 xl:mx-0 p-4 border-mustard-yellow  shadow-xl shadow-mustard-shadow mb-8 sm:mb-0' iconClassName='bg-mustard-yellow'>
+                <Card icon icon_img={Icon} className='h-[380.05px] xl:h-[370.05px] xl:mx-0 p-4 border-mustard-yellow  shadow-xl shadow-mustard-shadow mb-8 sm:mb-0' iconClassName='bg-mustard-yellow'>
                     <p className='mt-4 text-sm leading-loose'>Earning industry-recognized credentials is a powerful way to validate your expertise and stand out in a competitive job market. Our certification training programs provide you with the opportunity to earn valuable credentials that demonstrate your proficiency and mastery of essential HR concepts and practices. </p>
                 </Card>
-                <Card icon icon_img={Icon2} className='xl:mx-0 p-4 border-yrci-red mb-8 sm:mb-0 shadow-xl shadow-red-shadow' iconClassName='bg-yrci-red'>
+                <Card icon icon_img={Icon2} className='h-[380.05px] xl:h-[370.05px] xl:mx-0 p-4 border-yrci-red mb-8 sm:mb-0 shadow-xl shadow-red-shadow' iconClassName='bg-yrci-red'>
                     <p className='mt-4 text-sm leading-loose'>Whether you're vying for a promotion within your current organization or seeking new career opportunities, our certification training programs can help you achieve your career goals. By expanding your skill set, earning valuable credentials, and demonstrating your commitment to professional development, you'll position yourself for success and open doors to new and exciting career opportunities.</p>
                 </Card>
-                <Card icon icon_img={Icon3} className=' p-4 border-muted-turquise  shadow-xl shadow-turquise-shadow mb-8 sm:mb-0' iconClassName='bg-muted-turquise'>
+                <Card icon icon_img={Icon3} className='h-[380.05px] xl:h-[370.05px] xl:mx-0 p-4 border-muted-turquise  shadow-xl shadow-turquise-shadow mb-8 sm:mb-0' iconClassName='bg-muted-turquise'>
                     <p className='mt-4 text-sm leading-loose'>HR professionals play a critical role in supporting the operations and strategic objectives of their organizations. By equipping yourself with the skills and knowledge needed to navigate the evolving HR landscape, you'll be better prepared to address the challenges and opportunities facing your organization.</p>
                 </Card>
             </div>

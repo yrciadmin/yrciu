@@ -38,14 +38,14 @@ body {
 .swiper-button-prev  {
   top: 5% !important;
   color: #134d61 !important;
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .swiper-button-next  {
   top: 5% !important;
   right: 90% !important;
   color: #134d61 !important;
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .swiper-slides {
@@ -56,5 +56,13 @@ body {
   right: 90% !important;
   height: 50%;
   padding: 10px;
-  width: 100px;
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-button-prev {
+    margin-right: 20rem !important;
+    border: 2px solid red;
+
+  }
 }

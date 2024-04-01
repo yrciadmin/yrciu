@@ -17,13 +17,16 @@ const Reviews = () => {
   return (
     <section className='bg-reviews flex flex-col xl:pl-16 xl:pb-8'>
         <div className='flex flex-col justify-center items-center xl:items-start px-4 md:px-20 xl:px-0'>
-            <div className='flex lg:justify-center lg:items-center mt-8'><Heading className='capitalize text-[1.5rem] sm:text-6xl text-dark-teal sm:text-black'>From Students to Success</Heading></div>
+            <div className='flex lg:justify-center lg:items-center mt-8'><Heading className='capitalize text-[1.5rem] md:text-4xl xl:text-6xl text-dark-teal sm:text-black'>From Students to Success</Heading></div>
             <Paragraph className='mt-8 w-full xl:w-1/2'>The YRCI University (YRCI-U) is a training and re-skilling program designed by YRCI’s own subject matter experts to address an expertise shortage in the Federal HR market as Baby Boomers continue to retire and leave the workforce.</Paragraph>
         </div>
-        <div className='mt-20 hidden lg:flex lg:ml-10  lg:mr-40 justify-self-end w-full'>
+        <div className='mt-20 hidden lg:flex md:ml-10 lg:mr-40 justify-self-end w-full'>
             <ReviewsCarousel data={data}/>
         </div>
-        <div className='flex md:mx-20 lg:hidden'>
+        <div className='mt-20 hidden md:flex md:ml-10 lg:mr-40 justify-self-end w-full'>
+            <ReviewsCarousel data={data} num_slides={2}/>
+        </div>
+        <div className='flex md:mx-20 md:hidden'>
             <ReviewsCarouselMobile data={data} color="#134d61"/>
         </div>
     </section>
