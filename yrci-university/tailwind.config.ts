@@ -14,6 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "featured-courses": "url('../assets/featured-course-section-bg.png')",
         "contact-us": "url('../assets/contact-us-section.png')",
+        "hero-bg-mobile": "url('../assets/hero-mobile-bg.png')",
         "instructors": "url('../assets/instructors-bg.png')",
         "instructors-mobile": "url('../assets/instructors-bg-mobile.png')",
         "instructors-tablet": "url('../assets/instructors-bg-tablet.png')",
