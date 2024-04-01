@@ -42,7 +42,7 @@ const config: Config = {
         "muted-turquise": "#5698a1",
         "red-shadow": "#FFE8E7",
         "turquise-shadow": "#E6FCFF",
-        "yrci-black": "#ce2129",
+        "yrci-black": "#040503",
         "yrci-red": "#ce2129",
       },
       keyframes: {

@@ -5,16 +5,18 @@ import SocialProof from "./components/SocialProof";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Instructors from "./components/Instructors";
 import Reviews from "./components/Reviews";
-export default function Home() {
+import Home from "./landing/page";
+export default function App() {
   return (
     <>
-     <Hero/>
+    <Home/>
+     {/* <Hero/>
      <SocialProof/>
      <WhyChooseUs/>
      <FeaturedCourses/>
      <Instructors/>
      <Reviews/>
-     {/* <ContactUs/> */}
+     <ContactUs/> */}
     </>
     
   );
