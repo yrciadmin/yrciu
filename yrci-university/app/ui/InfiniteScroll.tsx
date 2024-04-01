@@ -41,34 +41,24 @@ interface BannerPorps {
         <img src='/image5' key={5}/>,
         <img src='/image6' key={6}/>,
     ]
-    //   const images = [
-//     {src: AmericorpsLogo, name: "Ameri Corp"},
-//     {src: USDAARSLogo, name: "USDA"},
-//     {src: CommerceLogo, name: "US Commerce"},
-//     {src: NOAALogo, name: "NOAA"},
-//     {src: TrademarkLogo, name: "US Trademark"}
-  
-//   ]
+
     return (
         <div className="block w-full h-fit xl:hidden">
         <Swiper
              effect='slide'
              slidesPerView={2} 
-            // //since the slides array length is 6,
-            // //slidesPerView should be less than or equal to 3
+           
              loop={true}
              autoplay={{
                  "delay": 1000,
-                //  "disableOnInteraction": false,
-                //  "pauseOnMouseEnter": false,
                  "stopOnLastSlide": false,
                  "waitForTransition": true
              }}
              modules={[Autoplay]}
         >
             <div className="border-8">
-        {images.map((item) => <SwiperSlide>
-            <div className=" mx-4">
+        {images.map((item, index) => <SwiperSlide>
+            <div key={index} className=" mx-4">
                 <Image width={0} height={0} src={item.src} alt={item.name}/>
             </div>
         </SwiperSlide>)}
