@@ -19,9 +19,10 @@ interface DataProps {
 
 interface CarouselProps {
     data: DataProps[]
+    num_slides?: number
 }
 
-const Carousel = ({ data }: CarouselProps) => {
+const Carousel = ({ data, num_slides }: CarouselProps) => {
   const cardColorClasses = [
     'bg-dark-teal',
     'bg-mustard-yellow',
@@ -37,7 +38,7 @@ const Carousel = ({ data }: CarouselProps) => {
   return (
     <>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={3 || num_slides}
         spaceBetween={30}
         navigation={true} 
         modules={[Navigation]}
