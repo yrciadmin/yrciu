@@ -19,9 +19,9 @@ const FeaturedCourses = () => {
   return (
     <section className='bg-featured-courses bg-center bg-no-repeat w-full mt-32 flex flex-col h-fit'>
         <div className='flex mt-10 h-20 justify-center bg-dark-teal sm:bg-transparent text-white sm:text-black'><Heading className='text-[2.5rem] sm:text-4xl self-center'>Featured Courses</Heading></div>
-        <div className='block sm:hidden'><MobileCarousel color={'#134d61'} button data={data}/></div>
+        <div className='block lg:hidden'><MobileCarousel color={'#134d61'} button data={data}/></div>
 
-        <div className='hidden sm:flex flex-col sm:flex-row flex-wrap justify-center mt-8 sm:w-11/12'>
+        <div className='hidden lg:flex flex-col sm:flex-row flex-wrap justify-center mt-8  md:w-full xl:w-11/12'>
             <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>
                 <Image
                     src={Course1}

@@ -9,7 +9,7 @@ import TrademarkLogo from '../../assets/logos/US_Patent_and_Trademark_Office_bla
 const SocialProof = () => {
   return (
     <div className="h-40 relative overflow-hidden bg-dark-teal flex items-center mt-8" >
-      <div className="absolute whitespace-nowrap animate-scroll-logo sm:animate-none flex w-[550px] sm:justify-around sm:w-full px-0">
+      <div className="absolute whitespace-nowrap animate-scroll-logo xl:animate-none flex w-[550px] sm:justify-around sm:w-full px-0">
       <Image src={AmericorpsLogo} alt="Americorps"  className='w-[221px] h-[50px] mx-3 sm:mr-0'/>
       <Image src={USDAARSLogo} alt="USDAARS" className='w-[221px] h-[50px] mx-3  sm:mr-0'/>
       <Image src={CommerceLogo} alt="Department of Commerce" className=' w-[221px] h-[50px] mx-3 sm:mr-0'/>

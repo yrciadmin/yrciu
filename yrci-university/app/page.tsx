@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Instructors from "./components/Instructors";
-import "./globals.css"
+import Reviews from "./components/Reviews";
 export default function Home() {
   return (
     <>
@@ -13,6 +13,7 @@ export default function Home() {
      <WhyChooseUs/>
      <FeaturedCourses/>
      <Instructors/>
+     <Reviews/>
      {/* <ContactUs/> */}
     </>
     

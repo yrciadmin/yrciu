@@ -31,7 +31,7 @@ const MobileNav = ({data, button, color}: CarouselProps) => {
       <Swiper
         pagination={true}
         modules={[Pagination]}
-        className="mySwiper w-full h-fit p-4 border"
+        className="mySwiper w-full h-fit p-4"
         style={{
             "--swiper-pagination-bullet-size": "12px",
             "--swiper-pagination-color": `${color}`,
@@ -43,7 +43,7 @@ const MobileNav = ({data, button, color}: CarouselProps) => {
           {data.map((card, index) => (
          <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px]'>
            
-                <Card  icon={false} className='flex flex-col sm:flex-row items-center sm:justify-around  w-full min-h-[519px] p-4'>
+                <Card  icon={false} className='flex flex-col sm:flex-row items-center sm:justify-around w-full  min-h-[519px] p-4'>
                     <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] h-[128px] bg-cover sm:w-[218px] sm:h-[326.38px] rounded-[13.01px]`}></div>
                     <div className='sm:w-1/2 flex flex-col justify-between'>
                         <div className='hidden sm:flex justify-around mb-4 text-xs w-1/2'>

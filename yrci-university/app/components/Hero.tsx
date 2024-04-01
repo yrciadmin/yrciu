@@ -8,8 +8,8 @@ import LinkButton from '../ui/LinkButton'
 //TODO: CREATE DESIGN FOR MOBILE METRICS SECTION
 const Hero = () => {
   return (
-    <section className='flex-col sm:flex-row flex justify-between items-center sm:mx-24'>
-        <div className='w-full p-8 sm:p-0 sm:w-1/2'>
+    <section className='flex-col sm:flex-row flex justify-between items-center md:mx-8 lg:mx-24'>
+        <div className='w-full p-8 sm:p-0 xl:w-1/2'>
             <div className='flex flex-col'>
                 <h1 className='font-bold sm:text-6xl text-3xl'>Maximize Your Professional Value</h1>
                 <h1 className='font-bold sm:text-6xl text-3xl text-yrci-red mb-8'>with YRCI University</h1>
@@ -17,7 +17,7 @@ const Hero = () => {
                 <LinkButton link='https://yrciuniversity.docebosaas.com/learn' className='text-white self-end w-8/12 text-lg sm:self-start sm:w-fit sm:px-8 bg-yrci-red'>Learn More</LinkButton>
             </div>
         </div>
-        <div className='hidden sm:block w-2/5 relative'>
+        <div className='hidden xl:block w-2/5 relative'>
             <div className='absolute'>
                 <Metrics/>
             </div>

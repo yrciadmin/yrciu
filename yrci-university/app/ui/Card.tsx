@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
+import { twMerge } from 'tailwind-merge';
 
 interface CardProps {
     className?: string
@@ -11,7 +12,7 @@ interface CardProps {
 
 const Card = ({children, className, icon, icon_img, iconClassName}: CardProps) => {
   return (
-    <div className={`w-[344.01px] h-[350.05px] bg-white rounded-[10.06px] shadow border-2 ${className}`}>
+    <div className={twMerge(`w-[344.01px] h-[350.05px] bg-white rounded-[10.06px] shadow border-2 border-dark-gray, ${className}`)}>
         {icon && (
             <div className={`h-16 w-16 rounded-full flex items-center justify-center ${iconClassName}`}>
                 <Image
