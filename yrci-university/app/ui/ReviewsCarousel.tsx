@@ -51,7 +51,7 @@ const Carousel = ({ data, num_slides }: CarouselProps) => {
       >
         {data.map((item, index) => (
          <SwiperSlide key={index} className='flex justify-end items-center h-[600px] w-[320px] swiper-slides' style={{display: "flex", justifyContent: "flex-end", width: "320px"}}>
-                <Card key={index} icon={false} className={`${cardColorClasses[index % cardColorClasses.length]} shadow-2xl justify-self-end self-end text-white flex flex-col sm:flex-row items-center sm:justify-around  w-[602px] min-h-[519px] p-4`}>
+                <Card icon={false} className={`${cardColorClasses[index % cardColorClasses.length]} shadow-2xl justify-self-end self-end text-white flex flex-col sm:flex-row items-center sm:justify-around  w-[602px] min-h-[519px] p-4`}>
                     <div className='flex flex-col text-white'>
                         <div className='text-6xl mb-4'><FontAwesomeIcon icon={faQuoteLeft}/></div>
                         <Paragraph className='self-center h-80'>{item.content}</Paragraph>

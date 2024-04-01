@@ -45,7 +45,9 @@ const FeaturedCourses = () => {
                             <p>Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.</p>
                         </div>
                 </div>
-                <LinkButton  link="https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course" className="h-10 p-2.5 bg-white sm:hover:bg-yrci-red rounded-lg shadow border sm:border-red-600 justify-center items-center gap-2.5 inline-flex sm:hover:text-white sm:text-yrci-red text-base sm:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold w-full">Start Learning</LinkButton>
+                <LinkButton link="https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course" className="sm:w-[390px] w-full h-10 p-2.5 bg-white sm:hover:bg-yrci-red rounded-lg shadow border sm:border-red-600 justify-center items-center gap-2.5 inline-flex sm:hover:text-white sm:text-yrci-red text-base sm:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold">Start Learning</LinkButton>
+
+                {/* <LinkButton  link="https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course" className="h-10 p-2.5 bg-white sm:hover:bg-yrci-red rounded-lg shadow border sm:border-red-600 justify-center items-center gap-2.5 inline-flex sm:hover:text-white sm:text-yrci-red text-base sm:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold w-full border-8">Start Learning</LinkButton> */}
             </div>
 
               <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>

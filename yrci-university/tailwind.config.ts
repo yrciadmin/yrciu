@@ -14,6 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "featured-courses": "url('../assets/featured-course-section-bg.png')",
         "contact-us": "url('../assets/contact-us-section.png')",
+        "hero-bg-mobile": "url('../assets/hero-mobile-bg.png')",
         "instructors": "url('../assets/instructors-bg.png')",
         "instructors-mobile": "url('../assets/instructors-bg-mobile.png')",
         "instructors-tablet": "url('../assets/instructors-bg-tablet.png')",
@@ -41,7 +42,7 @@ const config: Config = {
         "muted-turquise": "#5698a1",
         "red-shadow": "#FFE8E7",
         "turquise-shadow": "#E6FCFF",
-        "yrci-black": "#ce2129",
+        "yrci-black": "#040503",
         "yrci-red": "#ce2129",
       },
       keyframes: {

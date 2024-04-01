@@ -1,6 +1,8 @@
-import React from 'react'
+"use client"
+import Image from "next/image";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import AmericorpsLogo from '../../assets/logos/Americorps.png'
-import Image from 'next/image'
 import USDAARSLogo from '../../assets/logos/USDA-ARS_white.png'
 import CommerceLogo from '../../assets/logos/Department-of-commerce.png'
 import NOAALogo from '../../assets/logos/NOAA_white.png'
@@ -9,49 +11,64 @@ import TrademarkLogo from '../../assets/logos/US_Patent_and_Trademark_Office_bla
 
 
 
-interface InfiniteScrollProps {
-    images: string[];
+interface BannerPorps {
+    images?: {
+      src: string;
+      name: string;
+    }[];
     speed: number;
-}
-
-const InfiniteScroll = () => {
-  return (
-    <div className='relative w-full overflow-hidden m-0 p-0'>
-        <div className=' h-40 whitespace-nowrap m-0 flex items-center justify-between w-[375px] animate-scroll-logo sm:animate-none'>
-            {/* <div className='flex justify-center items-center mx-2 w-[219px] h-[50px] sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={AmericorpsLogo} alt="Americorps"  className='w-[219px] h-[50px] mr-8'/>
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'>         */}
-            <Image src={USDAARSLogo} alt="USDAARS" className='w-[219px] h-[50px] mr-8'/>
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={CommerceLogo} alt="Department of Commerce" className='w-[221px] h-[50px] mr-8 border'/>
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={NOAALogo} alt="NOAA" className='w-[221px] h-[50px] mr-8' />
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={TrademarkLogo} alt="US Patent and Trademark" className='w-[221px] h-[50px] mr-8 border'/>
-            {/* </div> */}
+  }
+  
+ const InfiniteScroll = ({  speed }: BannerPorps) => {
+  
+    const images = [
+        {src: AmericorpsLogo, name: "Ameri Corp"},
+        {src: USDAARSLogo, name: "USDA"},
+        {src: CommerceLogo, name: "US Commerce"},
+        {src: NOAALogo, name: "NOAA"},
+        {src: TrademarkLogo, name: "US Trademark"},
+        {src: AmericorpsLogo, name: "Ameri Corp"},
+        {src: USDAARSLogo, name: "USDA"},
+        {src: CommerceLogo, name: "US Commerce"},
+        {src: NOAALogo, name: "NOAA"},
+        {src: TrademarkLogo, name: "US Trademark"}
+      ]
 
 
-            <Image src={AmericorpsLogo} alt="Americorps"  className='w-[219px] h-[50px] mr-8'/>
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'>         */}
-            <Image src={USDAARSLogo} alt="USDAARS" className='w-[219px] h-[50px] mr-8'/>
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={CommerceLogo} alt="Department of Commerce" className='w-[221px] h-[50px] mr-8 border'/>
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={NOAALogo} alt="NOAA" className='w-[221px] h-[50px] mr-8' />
-            {/* </div> */}
-            {/* <div className='flex justify-center items-center mx-2 sm:w-36 sm:h-16 sm:mx-4 my-0 sm:my-4'> */}
-                <Image src={TrademarkLogo} alt="US Patent and Trademark" className='w-[221px] h-[50px] mr-8 border'/>
-
+    return (
+        <div className="block w-full h-fit xl:hidden">
+        <Swiper
+             effect='slide'
+             slidesPerView={2} 
+           
+             loop={true}
+             autoplay={{
+                 "delay": 1000,
+                 "stopOnLastSlide": false,
+                 "waitForTransition": true
+             }}
+             modules={[Autoplay]}
+        >
+            <div className="border-8">
+        {images.map((item, index) => 
+        <SwiperSlide key={index}>
+            <div  className=" mx-4">
+                <Image width={0} height={0} src={item.src} alt={item.name}/>
+            </div>
+        </SwiperSlide>)}
         </div>
-    </div>
-  )
-}
-
-export default InfiniteScroll
+        </Swiper>
+        </div>
+    )
+    // return (
+    //   <div className='images' style={imagesStyle}>
+    //     {images.map(({ src, name }) => (
+    //       <div className='image'>
+    //         <img src={src} alt={name} />
+    //       </div>
+    //     ))}
+    //   </div>
+    // );
+  }
+  
+  export default InfiniteScroll;
