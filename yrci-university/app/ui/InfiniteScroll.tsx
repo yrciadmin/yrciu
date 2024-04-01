@@ -33,14 +33,7 @@ interface BannerPorps {
         {src: NOAALogo, name: "NOAA"},
         {src: TrademarkLogo, name: "US Trademark"}
       ]
-    const slides = [
-        <img src='/image1' key={1}/>,
-        <img src='/image2' key={2}/>,
-        <img src='/image3' key={3}/>,
-        <img src='/image4' key={4}/>,
-        <img src='/image5' key={5}/>,
-        <img src='/image6' key={6}/>,
-    ]
+
 
     return (
         <div className="block w-full h-fit xl:hidden">
@@ -57,8 +50,9 @@ interface BannerPorps {
              modules={[Autoplay]}
         >
             <div className="border-8">
-        {images.map((item, index) => <SwiperSlide>
-            <div key={index} className=" mx-4">
+        {images.map((item, index) => 
+        <SwiperSlide key={index}>
+            <div  className=" mx-4">
                 <Image width={0} height={0} src={item.src} alt={item.name}/>
             </div>
         </SwiperSlide>)}
