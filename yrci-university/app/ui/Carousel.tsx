@@ -28,7 +28,7 @@ const Carousel = ({ data }: CarouselProps) => {
   };
 
   return (
-    <div className="w-full display hidden sm:flex">
+    <div className="w-full display hidden xl:flex">
                 <button onClick={handlePrev} className="pl-8  text-white text-6xl"> 
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </button>

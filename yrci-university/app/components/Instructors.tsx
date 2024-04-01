@@ -1,9 +1,5 @@
 import React from 'react'
 import Heading from '../ui/Typography/Heading'
-import Card from '../ui/Card'
-import Paragraph from '../ui/Typography/Paragraph'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Carousel from '../ui/Carousel'
 import MobileCarousel from '../ui/MobileCarousel'
 const data = [
@@ -16,10 +12,10 @@ const data = [
 
 const Instructors = () => {
   return (
-    <div className='bg-instructors-mobile sm:bg-instructors bg-center flex flex-col bg-no-repeat sm:mt-36 mb-8'>
-        <div className='flex justify-center bg-instructors-title sm:bg-none'><Heading className='capitalize mb-8 sm:text-4xl self-center text-white mt-11 text-[1.5rem]'>Meet our talented instructors</Heading></div>
+    <div className='bg-instructors-mobile sm:bg-instructors-tablet xl:bg-instructors bg-center flex flex-col bg-no-repeat mb-8'>
+        <div className='flex justify-center bg-instructors-title xl:bg-none'><Heading className='capitalize mb-8 sm:text-4xl self-center text-white mt-11 text-[1.5rem]'>Meet our talented instructors</Heading></div>
         <Carousel data={data}/>
-        <section className='block h-[600px] sm:hidden'>
+        <section className='block h-[600px] xl:hidden'>
             <MobileCarousel color={'#ce2129'} data={data}/>
         </section>
     </div>
