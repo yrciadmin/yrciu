@@ -14,7 +14,7 @@ export default function Home() {
      <FeaturedCourses/>
      <Instructors/>
      <Reviews/>
-     {/* <ContactUs/> */}
+     <ContactUs/>
     </>
     
   );
