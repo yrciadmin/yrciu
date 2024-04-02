@@ -57,7 +57,7 @@ const ReviewsCarouselMobile = ({ data, color }: CarouselProps) => {
       >
           {data.map((item, index) => (
          <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px]'>
-                <Card key={index} icon={false} className={`${cardColorClasses[index % cardColorClasses.length]} flex flex-col sm:flex-row items-center sm:justify-around  w-full min-h-[519px] p-4`}>
+                <Card key={index} icon={false} className={`${cardColorClasses[index % cardColorClasses.length]} flex flex-col sm:flex-row items-center sm:justify-around  w-full min-h-[519px] max-w p-4`}>
                     <div className='flex flex-col text-white'>
                         <div className='text-6xl mb-4'><FontAwesomeIcon icon={faQuoteLeft}/></div>
                         <Paragraph className='self-center h-80'>{item.content}</Paragraph>

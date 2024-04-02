@@ -11,7 +11,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "featured-courses": "url('../assets/featured-course-section-bg.png')",
         "contact-us": "url('../assets/contact-us-section.png')",
         "hero-bg-mobile": "url('../assets/hero-mobile-bg.png')",
@@ -20,6 +20,7 @@ const config: Config = {
         "instructors-tablet": "url('../assets/instructors-bg-tablet.png')",
         "instructors-title": "url('../assets/instructors-mobile.png')",
         "reviews": "url('../assets/reviews-bg.png')",
+        "reviwews-card-bg": "url('../assets/YRCIU-WhiteSmall.png')",
         "cody-headshot": "url('../assets/headshots/cody_headshot.jpg')",
         "dan-headshot": "url('../assets/headshots/dan_headshot.jpg')",
         "diane-headshot": "url('../assets/headshots/diane_headshot.jpg')",

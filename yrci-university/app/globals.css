@@ -8,13 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -32,41 +32,42 @@ body {
 
 .swipers {
   padding-top: 8rem !important;
+  
   /* padding-left: 20rem !important; */
 }
 
 .swiper-button-prev  {
   top: 5% !important;
+  left: 2% !important;
   color: #134d61 !important;
   font-size: 18px !important;
+
 }
 
 .swiper-button-next  {
   top: 5% !important;
-  right: 90% !important;
+  right: 85% !important;
   color: #134d61 !important;
   font-size: 18px !important;
 }
 
-.swiper-slides {
-  width:  401px !important;
-}
-.review-swiper-button-next .review-swiper-button-prev {
+
+/* .review-swiper-button-next .review-swiper-button-prev {
   top: 5% !important;
   right: 90% !important;
   height: 50%;
   padding: 10px;
   width: 150px;
-}
+} */
 
 /* all images */
-.image {
+/* .image {
   max-width: 150px;
   height: 10rem;
   object-fit: cover;
   padding: 0 10px;
   cursor: pointer;
-}
+} */
 
 .banner-wrapper {
   width: 100%;

@@ -52,7 +52,7 @@ interface BannerPorps {
             <div className="border-8">
         {images.map((item, index) => 
         <SwiperSlide key={index}>
-            <div  className=" mx-4">
+            <div  className="mx-4">
                 <Image width={0} height={0} src={item.src} alt={item.name}/>
             </div>
         </SwiperSlide>)}
