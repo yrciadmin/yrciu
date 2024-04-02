@@ -20,7 +20,7 @@ const Input = () => {
       <input type="text" id="employer" name="employer" aria-label="Employer" className="pl-4 w-full md:w-[449px] h-[52px] bg-white rounded-lg border border-neutral-400 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Employer" />
     </div>
     <Button className='w-[155px] h-[52px] bg-red-600 rounded-lg shadow text-white self-end'>Submit</Button>
- \
+ 
   </form>
   )
 }
