@@ -79,15 +79,6 @@ loop
                     <Image className="w-[100px] h-[100px] left-[250px] top-[470px] absolute opacity-5" src={dots} width={0} height={0} alt="style"/>
                   </div>
                 </div>
-                    {/* <Card icon={false} className={`bg-reviwews-card-bg  ${cardColorClasses[index % cardColorClasses.length]} shadow-2xl justify-self-end self-end text-white flex flex-col sm:flex-row items-center sm:justify-around  w-[602px] min-h-[519px] p-4`}>
-                    <div className='flex flex-col text-white'>
-                        <div className='text-6xl mb-4'><FontAwesomeIcon icon={faQuoteLeft}/></div>
-                        <Paragraph className='self-center h-80'>{item.content}</Paragraph>
-                        <Paragraph className='mt-8 text-lg font-bold'>{item.title}</Paragraph>
-                    </div>
-                   
-                    </Card> */}
-               
         </SwiperSlide>
 
          ))}
