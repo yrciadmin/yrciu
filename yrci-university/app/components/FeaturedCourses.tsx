@@ -7,6 +7,7 @@ import Course4 from '../../assets/cardImages/courseImage4.png'
 import Heading from '../ui/Typography/Heading'
 import LinkButton from '../ui/LinkButton'
 import MobileCarousel from '../ui/MobileCarousel'
+import TabletCarousel from '../ui/TabletCarousel'
 
 const data = [
     { id: 1, title: 'DELEGATED EXAMINING CERTIFICATION PREPARATORY COURSE', image: `bg-course-1`, link: `https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course`, content: 'Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.' },
@@ -17,11 +18,12 @@ const data = [
 
 const FeaturedCourses = () => {
   return (
-    <section className='bg-featured-courses bg-center bg-no-repeat w-full mt-32 flex flex-col h-fit'>
+    <section className='bg-featured-courses bg-cover bg-center bg-no-repeat mt-32 flex flex-col h-fit w-full'>
         <div className='flex mt-10 h-20 justify-center bg-dark-teal sm:bg-transparent text-white sm:text-black'><Heading className='text-[2.5rem] sm:text-4xl self-center'>Featured Courses</Heading></div>
-        <div className='block lg:hidden'><MobileCarousel color={'#134d61'} button data={data}/></div>
+        <div className='block sm:hidden'><MobileCarousel color={'#134d61'} button data={data}/></div>
+        <div className='lg:hidden sm:block hidden'><TabletCarousel color={'#134d61'} button data={data}/></div>
 
-        <div className='hidden lg:flex flex-col sm:flex-row flex-wrap justify-center mt-8  md:w-full xl:w-11/12'>
+        <div className='hidden lg:flex flex-col sm:flex-row flex-wrap justify-center mt-8  md:w-full'>
             <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>
                 <Image
                     src={Course1}

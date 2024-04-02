@@ -22,13 +22,16 @@ interface CarouselProps {
     data: DataProps[]
     button?: boolean
     color: string
+    num_slides?: number
 }
 
 //TODO: MOVE DATA PROPS TO OWN FILE
-const MobileNav = ({data, button, color}: CarouselProps) => {
+const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
+    console.log(num_slides)
   return (
     <>
       <Swiper
+      slidesPerView={ num_slides ? num_slides : 1}
         pagination={true}
         modules={[Pagination]}
         className="mySwiper w-full h-fit p-4"
@@ -41,32 +44,32 @@ const MobileNav = ({data, button, color}: CarouselProps) => {
         } as CSSProperties}
       >
           {data.map((card, index) => (
-         <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px]'>
+         <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px] w-fit'>
            
-                <Card  icon={false} className='flex flex-col sm:flex-row items-center sm:justify-around w-full  min-h-[519px] p-4'>
-                    <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] h-[128px] bg-cover sm:w-[218px] sm:h-[326.38px] rounded-[13.01px]`}></div>
-                    <div className='sm:w-1/2 flex flex-col justify-between'>
-                        <div className='hidden sm:flex justify-around mb-4 text-xs w-1/2'>
+                <Card  icon={false} className='flex flex-col md:flex-row items-center md:justify-around w-full sm:w-8/12 min-w-[348px] min-h-[519px] p-4 md:self-center'>
+                    <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] h-[128px] bg-cover md:w-[218px] md:h-[326.38px] rounded-[13.01px]`}></div>
+                    <div className='md:w-1/2 flex flex-col justify-between'>
+                        <div className='hidden md:flex justify-around mb-4 text-xs w-1/2'>
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                         </div>
-                        <div className='flex flex-col-reverse sm:flex-col '>
-                            <Paragraph className='text-xs leading-5 mt-4 sm:mt-0'>{card.content}</Paragraph>
-                            <h1 className='border-b-[1px] border-black pb-4 sm:pb-0 sm:border-none text-xl font-bold mt-4'>{card.title}</h1>
+                        <div className='flex flex-col-reverse md:flex-col '>
+                            <Paragraph className='text-xs leading-5 mt-4 md:mt-0'>{card.content}</Paragraph>
+                            <h1 className='border-b-[1px] border-black pb-4 md:pb-0 md:border-none text-xl font-bold mt-4'>{card.title}</h1>
                         </div>
 
-                        <div className='flex w-fit items-center justify-between sm:hidden '>
-                            <div className='h-8 w-8 flex mr-5 justify-center items-center text-[#FEA914] sm:hidden border rounded-full mt-5'>
+                        <div className='flex w-fit items-center justify-between md:hidden '>
+                            <div className='h-8 w-8 flex mr-5 justify-center items-center text-[#FEA914] md:hidden border rounded-full mt-5'>
                                 <div className='w-4 h-4 flex justify-center items-center'>
                                     <FontAwesomeIcon icon={faStar} />
                                 </div>
                             </div> 
                             <p className='text-md self-end  font-extrabold'>5.0</p>
                         </div>
-                        {card.link && ( <LinkButton link={card.link} className='h-10 p-2.5 bg-white sm:hover:bg-yrci-red rounded-lg shadow border sm:border-red-600 justify-center items-center gap-2.5 inline-flex sm:hover:text-white sm:text-yrci-red text-base sm:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold w-full'>start leraning</LinkButton>)}
+                        {card.link && ( <LinkButton link={card.link} className='h-10 p-2.5 bg-white md:hover:bg-yrci-red rounded-lg shadow border md:border-red-600 justify-center items-center gap-2.5 inline-flex md:hover:text-white md:text-yrci-red text-base md:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold w-full'>start leraning</LinkButton>)}
 
                     </div>
                     
@@ -118,7 +121,7 @@ export default MobileNav
 //     };
   
 //     return (
-//       <div className="w-full items-center flex sm:hidden">
+//       <div className="w-full items-center flex md:hidden">
 //                   <button onClick={handlePrev} className="pl-[.5rem] text-white text-3xl"> 
 //                       <FontAwesomeIcon icon={faChevronLeft} />
 //                   </button>
