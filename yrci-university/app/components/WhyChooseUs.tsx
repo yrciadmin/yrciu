@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
 
        
             <div className='xl:flex hidden xl:flex-row flex-col items-center w-full justify-center sm:justify-around mt-8 md:overflow-y-auto xl:overflow-hidden'>
-                <Card icon icon_img={Icon} title="Sharpen your Skills" className='h-[380.05px] xl:h-[370.05px] xl:mx-0 p-4 border-mustard-yellow  shadow-xl shadow-mustard-shadow mb-8 sm:mb-0 overflow-hidden' iconClassName='bg-mustard-yellow'>
+                <Card icon icon_img={Icon} title="Boost Your Credentials" className='h-[380.05px] xl:h-[370.05px] xl:mx-0 p-4 border-mustard-yellow  shadow-xl shadow-mustard-shadow mb-8 sm:mb-0 overflow-hidden' iconClassName='bg-mustard-yellow'>
                     <p className='mt-4 text-sm leading-loose'>Earning industry-recognized credentials is a powerful way to validate your expertise and stand out in a competitive job market. Our certification training programs provide you with the opportunity to earn valuable credentials that demonstrate your proficiency and mastery of essential HR concepts and practices. </p>
                 </Card>
                 <Card icon icon_img={Icon2} title="Shape your Career" className='h-[380.05px] xl:h-[370.05px] xl:mx-0 p-4 border-yrci-red mb-8 sm:mb-0 shadow-xl shadow-red-shadow overflow-hidden' iconClassName='bg-yrci-red'>
