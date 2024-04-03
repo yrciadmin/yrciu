@@ -46,30 +46,30 @@ const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
           {data.map((card, index) => (
          <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px] w-fit'>
            
-                <Card  icon={false} className='flex flex-col md:flex-row items-center md:justify-around w-full sm:w-8/12 min-w-[348px] min-h-[519px] p-4 md:self-center'>
-                    <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] h-[128px] bg-cover md:w-[218px] md:h-[326.38px] rounded-[13.01px]`}></div>
-                    <div className='md:w-1/2 flex flex-col justify-between'>
-                        <div className='hidden md:flex justify-around mb-4 text-xs w-1/2'>
+                <Card  icon={false} className='flex flex-col items-center  w-full xs:w-[448px]  sm:w-[448px] min-w-[348px] min-h-[519px] p-2 pb-8'>
+                    <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] bg-cover w-[350px]  h-[323px]`}></div>
+                    <div className='flex flex-col justify-between'>
+                        <div className='hidden justify-around mb-4 text-xs w-1/2'>
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                         </div>
-                        <div className='flex flex-col-reverse md:flex-col '>
-                            <Paragraph className='text-xs leading-5 mt-4 md:mt-0'>{card.content}</Paragraph>
-                            <h1 className='border-b-[1px] border-black pb-4 md:pb-0 md:border-none text-xl font-bold mt-4'>{card.title}</h1>
+                        <div className='flex flex-col-reverse '>
+                            <Paragraph className='text-xs leading-5 mt-4'>{card.content}</Paragraph>
+                            <h1 className='border-b-[1px] border-black pb-4  text-xl font-bold mt-4'>{card.title}</h1>
                         </div>
 
-                        <div className='flex w-fit items-center justify-between md:hidden '>
-                            <div className='h-8 w-8 flex mr-5 justify-center items-center text-[#FEA914] md:hidden border rounded-full mt-5'>
+                        <div className='flex w-fit items-center justify-between'>
+                            <div className='h-8 w-8 flex mr-5 justify-center items-center text-[#FEA914] border rounded-full mt-5'>
                                 <div className='w-4 h-4 flex justify-center items-center'>
                                     <FontAwesomeIcon icon={faStar} />
                                 </div>
                             </div> 
-                            <p className='text-md self-end  font-extrabold'>5.0</p>
+                            <p className=' self-end  font-extrabold'>5.0</p>
                         </div>
-                        {card.link && ( <LinkButton link={card.link} className='h-10 p-2.5 bg-white md:hover:bg-yrci-red rounded-lg shadow border md:border-red-600 justify-center items-center gap-2.5 inline-flex md:hover:text-white md:text-yrci-red text-base md:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold w-full'>start leraning</LinkButton>)}
+                        {card.link && ( <LinkButton link={card.link} className='h-10 p-2.5 bg-white  rounded-lg shadow border justify-center items-center gap-2.5 inline-flex md:hover:text-white  uppercase mt-8 text-dark-teal border-dark-teal font-extrabold w-full sm:w-full'>start leraning</LinkButton>)}
 
                     </div>
                     
