@@ -48,7 +48,7 @@ const FeaturedCourses = () => {
                         </div>
                         <div className='hidden sm:flex  justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Cost:</h1>
-                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>1200.00</p>
+                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>1299.00</p>
                         </div>
                         <div className='sm:w-[390px] min-h-[168px]'>
                             <p>Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.</p>
@@ -76,7 +76,7 @@ const FeaturedCourses = () => {
                         </div>
                         <div className='hidden sm:flex  justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Cost:</h1>
-                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>250.00</p>
+                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>145.00</p>
                         </div>
                         <div className='sm:w-[390px] min-h-[168px]'>
                             <p>Learn about the Federal government's competitive hiring process, hiring authorities in the excepted service, and information for current and former Federal employees. Equip yourself with the knowledge to effectively explain hiring authorities to hiring managers and make informed recommendations for staffing decisions.</p>
@@ -102,7 +102,7 @@ const FeaturedCourses = () => {
                         </div>
                         <div className='hidden sm:flex justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Cost:</h1>
-                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>300.00</p>
+                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>299.00</p>
                         </div>
                         <div className='sm:w-[390px] min-h-[168px]'>
                             <p>Enroll in our self-guided e-learning course to elevate your understanding of Veterans’ Preference in the Federal hiring process. Gain a comprehensive understanding of its benefits, legal framework, and verification techniques.</p>
