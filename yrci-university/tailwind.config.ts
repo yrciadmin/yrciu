@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -7,7 +8,12 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -27,10 +33,10 @@ const config: Config = {
         "cris-headshot": "url('../assets/headshots/cris_headshot.jpg')",
         "tyesha-headshot": "url('../assets/headshots/tyesha_headshot.jpg')",
 
-        "course-1": "url('../assets/cardImages/courseImage1.png')",
-        "course-2": "url('../assets/cardImages/courseImage2.png')",
-        "course-3": "url('../assets/cardImages/courseImage3.png')",
-        "course-4": "url('../assets/cardImages/courseImage4.png')",
+        "course-1": "url('../assets/cardImages/prep.jpg')",
+        "course-2": "url('../assets/cardImages/hiring.jpg')",
+        "course-3": "url('../assets/cardImages/vet-pref.jpg')",
+        "course-4": "url('../assets/cardImages/exploring.png')",
 
       },
       colors: {

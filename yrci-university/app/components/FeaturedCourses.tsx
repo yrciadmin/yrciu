@@ -1,32 +1,39 @@
 import Image from 'next/image'
 import React from 'react'
-import Course1 from '../../assets/cardImages/courseImage1.png'
-import Course2 from '../../assets/cardImages/courseImage2.png'
-import Course3 from '../../assets/cardImages/courseImage3.png'
-import Course4 from '../../assets/cardImages/courseImage4.png'
+import DelegatePrep from '../../assets/cardImages/prep.jpg'
+import VetPref from '../../assets/cardImages/vet-pref.jpg'
+import Hiring from '../../assets/cardImages/hiring.jpg'
+import Exploring from '../../assets/cardImages/exploring.png'
+
 import Heading from '../ui/Typography/Heading'
 import LinkButton from '../ui/LinkButton'
 import MobileCarousel from '../ui/MobileCarousel'
 import TabletCarousel from '../ui/TabletCarousel'
 
-const data = [
+// const data = [
+//     { id: 1, title: 'DELEGATED EXAMINING CERTIFICATION PREPARATORY COURSE', image: DelegatePrep, link: `https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course`, price: "1200.00", content: 'Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.' },
+//     { id: 2, title: 'HIRING AUTHORITIY', image: Hiring, link: `https://yrciuniversity.docebosaas.com/learn/courses/8/hiring-authorities`, price: "145.00",  content: `Learn about the Federal government's competitive hiring process, hiring authorities in the excepted service, and information for current and former Federal employees. Equip yourself with the knowledge to effectively explain hiring authorities to hiring managers and make informed recommendations for staffing decisions.` },
+//     { id: 3, title: 'VETERANS’ PREFERENCE',  image: VetPref, link: `https://yrciuniversity.docebosaas.com/lea rn/courses/90/veterans-preference`, price: "300.00", content: `Enroll in our self-guided e-learning course to elevate your understanding of Veterans’ Preference in the Federal hiring process. Gain a comprehensive understanding of its benefits, legal framework, and verification techniques.`},
+//     { id: 4, title: 'EXPLORING THE DELEGATED EXAMINING OPERATIONS HANDBOOK', link: `https://yrciuniversity.docebosaas.com/learn/courses/83/exploring-the-delegated-examining-operations-handbook-deoh`, image: Exploring, price: "1200.00", content: `Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.`},
+//   ];
+
+  const data = [
     { id: 1, title: 'DELEGATED EXAMINING CERTIFICATION PREPARATORY COURSE', image: `bg-course-1`, link: `https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course`, price: "1200.00", content: 'Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.' },
     { id: 2, title: 'HIRING AUTHORITIY', image: `bg-course-2`, link: `https://yrciuniversity.docebosaas.com/learn/courses/8/hiring-authorities`, price: "145.00",  content: `Learn about the Federal government's competitive hiring process, hiring authorities in the excepted service, and information for current and former Federal employees. Equip yourself with the knowledge to effectively explain hiring authorities to hiring managers and make informed recommendations for staffing decisions.` },
     { id: 3, title: 'VETERANS’ PREFERENCE',  image: `bg-course-3`, link: `https://yrciuniversity.docebosaas.com/lea rn/courses/90/veterans-preference`, price: "300.00", content: `Enroll in our self-guided e-learning course to elevate your understanding of Veterans’ Preference in the Federal hiring process. Gain a comprehensive understanding of its benefits, legal framework, and verification techniques.`},
     { id: 4, title: 'EXPLORING THE DELEGATED EXAMINING OPERATIONS HANDBOOK', link: `https://yrciuniversity.docebosaas.com/learn/courses/83/exploring-the-delegated-examining-operations-handbook-deoh`, image: `bg-course-4`, price: "1200.00", content: `Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.`},
   ];
-
 const FeaturedCourses = () => {
   return (
     <section className='bg-featured-courses bg-cover bg-center bg-no-repeat mt-32 flex flex-col h-fit w-full'>
         <div className='flex mt-10 h-20 justify-center bg-dark-teal sm:bg-transparent text-white sm:text-black'><Heading className='text-[2.5rem] sm:text-4xl self-center'>Featured Courses</Heading></div>
-        <div className='block sm:hidden'><MobileCarousel color={'#134d61'} button data={data}/></div>
-        <div className='lg:hidden sm:block hidden'><TabletCarousel color={'#134d61'} button data={data}/></div>
+        <div className='block md:hidden'><MobileCarousel color={'#134d61'} button data={data}/></div>
+        <div className=' md:block hidden lg:hidden '><TabletCarousel color={'#134d61'} button data={data} num_slides={1.5}/></div>
 
         <div className='hidden lg:flex flex-col sm:flex-row flex-wrap justify-center mt-8  md:w-full'>
             <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>
                 <Image
-                    src={Course1}
+                    src={DelegatePrep}
                     alt="Course One"
                 />
                 <h1 className='my-3 font-semibold text-xl uppercase sm:w-[390px] border-b border-dark-gray pb-3 min-h-[69px] min-w-full flex self-end'>Delegated Examining Certification Preparatory Course</h1>
@@ -54,7 +61,7 @@ const FeaturedCourses = () => {
 
               <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>
                 <Image
-                    src={Course2}
+                    src={Hiring}
                     alt="Course One"
                 />
                 <h1 className='my-3 font-semibold text-xl uppercase sm:w-[390px] border-b border-dark-gray pb-3 min-h-[69px] min-w-full flex self-end'>Hiring Authorities</h1>
@@ -80,7 +87,7 @@ const FeaturedCourses = () => {
 
             <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>
                 <Image
-                    src={Course3}
+                    src={VetPref}
                     alt="Course One"
                 />
                 <h1 className='my-3 font-semibold text-xl uppercase sm:w-[390px] border-b border-dark-gray pb-3 min-h-[69px] min-w-full flex self-end'>Veterans’ Preference</h1>
@@ -106,7 +113,7 @@ const FeaturedCourses = () => {
 
             <div className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col rounded-lg m-4 sm:m-10'>
                 <Image
-                    src={Course4}
+                    src={Exploring}
                     alt="Course One"
                 />
                 <h1 className='my-3 font-semibold text-xl uppercase sm:w-[390px] border-b border-dark-gray pb-3 min-h-[69px] min-w-full flex self-end'>Exploring the Delegated Examining Operations Handbook (DEOH)</h1>
