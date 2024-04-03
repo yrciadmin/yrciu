@@ -6,6 +6,7 @@ import USDAARSLogo from '../../assets/logos/USDA-ARS_white.png'
 import CommerceLogo from '../../assets/logos/Department-of-commerce.png'
 import NOAALogo from '../../assets/logos/NOAA_white.png'
 import TrademarkLogo from '../../assets/logos/US_Patent_and_Trademark_Office_black and white.png'
+import Heading from '../ui/Typography/Heading'
 
 const images = [
   {src: `${AmericorpsLogo}`, name: "Ameri Corp"},
@@ -17,7 +18,9 @@ const images = [
 
 const SocialProof = () => {
   return (
-    <div className='h-24 xl:h-40 w-full bg-dark-teal mt-8 flex items-center'>
+    <>
+    <div className='flex justify-start mt-8 sm:mt-20 pl-2 sm:justify-center'><Heading className='text-2xl font-extrabold text-dark-teal capitalize  sm:text-2xl md:text-2xl lg:text-4xl'>Join learners from these <span className='text-yrci-red'>federal agencies</span></Heading></div>
+    <div className='h-24 xl:h-40  bg-dark-teal mt-8 flex items-center w-11/12 sm:w-full'>
 <InfiniteScroll  speed={2000}/>
      {/* <div className="h-40 relative overflow-hidden bg-dark-teal flex items-center mt-8" > */}
       <div className="hidden absolute whitespace-nowrap xl:flex w-[550px] sm:justify-around sm:w-full px-0">
@@ -28,7 +31,7 @@ const SocialProof = () => {
       
       </div>
       </div>
-
+      </>
     // </div>
   )
 }   

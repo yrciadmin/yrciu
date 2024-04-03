@@ -5,7 +5,7 @@ import ReviewsCarouselMobile from '../ui/ReviewsCarouselMobile'
 import ReviewsCarousel from '../ui/ReviewsCarousel'
 
 const data = [
-    // {id: 1, value: "EXCELLENT" ,content: `I thoroughly appreciate and value the training received. The instructors and digital training environment were excellent. My only recommendation, which has already been suggested in training, is to definitely implement the reference to material (i.e. This is found in chapter #, section # of the DEOH or Vet Guide) into the SCORM and test portion of the syllabus. `, title: `DE Test Prep`},
+    {id: 1, value: "EXCELLENT" ,content: `The hands on activities really made the topics stick. Additionally, the training was collaborative where participation was encouraged.`, title: `DE Test Prep`},
     {id: 1, value: "OUTSTANDING", content: `YRCI should be commended for the outstanding training. Over the years I have had OPM/Other Agency training that did not compare to this training. It was TERRIFIC! The trainers are awesome. Love every part of it and it's all necessary and beneficial.`, title: `DE Test Prep`},
     {id: 2, value: "EFFECTIVE", content: `The instructors are very good at explaining the training modules and inquiring about whether we have questions or not. The courses are effective especially when reviewing together.`, title: `Federal Staffing Training`},
     {id: 3, value: `INVALUABLE`, content: `This was the best course EVER! and the resources provided are invaluable!!`, title: `DE Test Prep`},

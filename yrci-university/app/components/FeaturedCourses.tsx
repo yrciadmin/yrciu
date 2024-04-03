@@ -40,7 +40,7 @@ const FeaturedCourses = () => {
                 <div className='flex  flex-col sm:w-[390px]'>
                     <div className='hidden sm:flex justify-between'>
                         <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Time:</h1>
-                        <p className='w-[160.49px] text-right text-black text-lg font-boldcapitalize'>12hr</p>
+                        <p className='w-[160.49px] text-right text-black text-lg font-boldcapitalize'>12hrs</p>
                     </div>
                         <div className='hidden sm:flex  justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Category:</h1>
@@ -94,7 +94,7 @@ const FeaturedCourses = () => {
                 <div className='flex flex-col sm:w-[390px]'>
                     <div className='hidden sm:flex justify-between'>
                         <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Time:</h1>
-                        <p className='w-[160.49px] text-right text-black text-lg font-boldcapitalize'>2hr</p>
+                        <p className='w-[160.49px] text-right text-black text-lg font-boldcapitalize'>2hrs</p>
                     </div>
                         <div className='hidden sm:flex  justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Category:</h1>
@@ -120,7 +120,7 @@ const FeaturedCourses = () => {
                 <div className='flex flex-col sm:w-[390px]'>
                     <div className='hidden sm:flex  justify-between'>
                         <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Time:</h1>
-                        <p className='w-[160.49px] text-right text-black text-lg font-boldcapitalize'>20hr</p>
+                        <p className='w-[160.49px] text-right text-black text-lg font-boldcapitalize'>20hrs</p>
                     </div>
                         <div className='hidden sm:flex  justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Category:</h1>
