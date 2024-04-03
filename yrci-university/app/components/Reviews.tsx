@@ -13,7 +13,8 @@ const data = [
     {id: 5, value: "EXCELLENT", content: `I love the way the trainer illustrates and explains through each function and breaks it down.`, title: `DE Test Prep`},
 
     {id: 6, value: "engaging", content: `The instructor engaged the attendees with exercises, which made the workshop lessons learned memorable for practical use.  `, title: `Client First: Working with Purpose and Professionalism`},
- 
+    {id: 7, value: "MEMORABLE", content: `I like that the time was taken to give us a refresher and build on the skills we possess. `, title: `DE Test Prep`},
+
 ]
 
 const Reviews = () => {
