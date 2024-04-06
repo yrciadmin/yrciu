@@ -18,6 +18,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  window.onload = function() {
+    var body = document.body,
+        html = document.documentElement,
+        height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    
+    parent.postMessage({iframeHeight: height}, "*");
+  };
   return (
     <html lang="en">
       <body className={` ${roboto.className}`}>
