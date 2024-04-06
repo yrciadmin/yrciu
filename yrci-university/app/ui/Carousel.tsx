@@ -46,8 +46,8 @@ const Carousel = ({ data }: CarouselProps) => {
                     <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                     <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
                  </div>
-                 <div className='flex flex-col-reverse sm:flex-col '>
-                     <Paragraph className='text-xs leading-5 mt-4 sm:mt-0'>{card.content}</Paragraph>
+                 <div className='flex flex-col-reverse sm:flex-col'>
+                     <Paragraph className='text-xs leading-5 mt-4 sm:mt-0 2xl:text-md'>{card.content}</Paragraph>
                      <h1 className='border-b-[1px] border-black pb-4 sm:pb-0 sm:border-none text-xl font-bold mt-4'>{card.title}</h1>
                  </div>
 
