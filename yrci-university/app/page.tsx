@@ -13,6 +13,7 @@ import { useEffect } from "react";
 export default function App() {
   const sendMessageToParent = () => {
     const height = document.documentElement.scrollHeight;
+    console.log("height", height)
     window.parent.postMessage({
       type: 'iframeResize',
       height: height
@@ -23,7 +24,8 @@ export default function App() {
   useEffect(() => {
     sendMessageToParent(); // Initial send
     window.addEventListener('resize', sendMessageToParent); // Optional: if you want to update on window resize
-  
+    window.addEventListener('load', sendMessageToParent); // Optional: if you want to update on window resize
+
     // Optional: For content that loads or changes dynamically, ensure to trigger sendMessageToParent appropriately
   
     return () => {
