@@ -11,7 +11,7 @@ const Input = () => {
 
   //BORDERS border-4 xs:border-orange-500  sm:border-slate-500   md:border-mustard-yellow  lg:border-indigo-500 xl:border-green-500  2xl:border-yrci-red
   return (
-    <form className="space-y-4 w-full flex flex-col items-center" aria-labelledby="contact-us">
+    <form className="space-y-4 w-full xs:w-11/12 flex flex-col items-center" aria-labelledby="contact-us">
       <div className='flex flex-row w-11/12 md:w-fit'>
         <input type="text" id="first-name" name="first-name" aria-label="First Name" className="mb-4 md:mb-0 mr-4 pl-4 w-full md:w-[219px] h-[52px] bg-white rounded-lg border border-neutral-400 focus:border-dark-teal focus:ring-dark-teal sm:text-sm" placeholder="First Name" />
         <input type="text" id="last-name" name="last-name" aria-label="Last Name" className="pl-4 w-full md:w-[219px] h-[52px] bg-white rounded-lg border border-neutral-400 focus:border-dark-teal focus:ring-dark-teal sm:text-sm" placeholder="Last Name" />
