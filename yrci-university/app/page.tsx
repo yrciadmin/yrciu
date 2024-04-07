@@ -47,7 +47,7 @@ export default function App() {
     window.parent.postMessage({
       type: 'iframeResize',
       height: height
-    }, "*"); // Ensure to replace with the actual origin
+    }, "https://yrci.com"); // Ensure to replace with the actual origin
   };
 
   useDebouncedResize(sendMessageToParent, 0); // Using the custom hook with a 500ms debounce
