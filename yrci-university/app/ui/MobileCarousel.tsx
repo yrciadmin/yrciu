@@ -39,7 +39,7 @@ const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
             "--swiper-pagination-bullet-size": "12px",
             "--swiper-pagination-color": `${color}`,
             "--swiper-pagination-top": "560px",
-            "padding-bottom": "50px",
+            "paddingBottom": "50px",
 
         } as CSSProperties}
       >
