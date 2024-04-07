@@ -27,7 +27,6 @@ interface CarouselProps {
 
 //TODO: MOVE DATA PROPS TO OWN FILE
 const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
-    console.log(num_slides)
   return (
     <>
       <Swiper
