@@ -28,7 +28,7 @@ function debounce(func: (...args: any[]) => void, wait: number, immediate?: bool
 // Custom hook for handling debounced resize events
 const useDebouncedResize = (callback: () => void, delay: number): void => {
   useEffect(() => {
-    const debouncedFn = debounce(callback, delay);
+    const debouncedFn = debounce(callback, delay, true);
     window.addEventListener('load', debouncedFn); // Initial load
 
     window.addEventListener('resize', debouncedFn);
