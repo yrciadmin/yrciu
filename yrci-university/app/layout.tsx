@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${roboto.className}`}>
-        <main className="min-h-[5577px] xs:min-h-[5425px] sm:min-h-[4931px]">{children}</main>
+        <main className="yrciu min-h-[5577px] xs:min-h-[5425px] sm:min-h-[4931px]">{children}</main>
       </body>
     </html>
   );
