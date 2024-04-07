@@ -7,12 +7,12 @@ const nextConfig = {
             headers: [
               {
                 key: 'Content-Security-Policy',
-                value: "default-src 'self'; frame-ancestors 'self' https://yrci.com;", 
+                value: "default-src 'self'; frame-ancestors 'self' https://yrci.com; style-src 'self' 'unsafe-inline';",
               },
             ],
           },
         ];
-      },
+    },
 };
 
 export default nextConfig;
