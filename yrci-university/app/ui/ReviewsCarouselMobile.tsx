@@ -51,7 +51,7 @@ const ReviewsCarouselMobile = ({ data, color }: CarouselProps) => {
             "--swiper-pagination-bullet-size": "12px",
             "--swiper-pagination-color": `${color}`,
             "--swiper-pagination-top": "560px",
-            "padding-bottom": "50px",
+            "paddingBottom": "50px",
 
         } as CSSProperties}
       >
