@@ -47,10 +47,10 @@ export default function App() {
     window.parent.postMessage({
       type: 'iframeResize',
       height: height
-    }, "https://yrci.com/"); 
+    }, "https://yrciu.vercel.app/"); 
   };
 
-  useDebouncedResize(sendMessageToParent, 0); // Using the custom hook with a 500ms debounce
+  useDebouncedResize(sendMessageToParent, 200); // Using the custom hook with a 500ms debounce
   
   useEffect(() => {
     sendMessageToParent(); // Send initial height
