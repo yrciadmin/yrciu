@@ -128,7 +128,7 @@ const FeaturedCourses = () => {
                         </div>
                         <div className='hidden sm:flex  justify-between'>
                             <h1 className='w-[81.11px] text-neutral-400 text-[13px] font-bold capitalize'>Cost:</h1>
-                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>1200.00</p>
+                            <p className='w-[160.49px] text-right text-yrci-red text-lg font-bold capitalize'>399.00</p>
                         </div>
                         <div className='sm:w-[390px] min-h-[168px]'>
                             <p>Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.</p>
