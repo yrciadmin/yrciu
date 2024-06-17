@@ -68,7 +68,7 @@ const TabletCarousel = ({data, button, color, num_slides}: CarouselProps) => {
                             </div>
                             {card.link && (
                                 <div className='flex items-center justify-center'>
-                                <LinkButton link="https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course" className="sm:w-[390px] w-full h-10 p-2.5 bg-white lg:hover:bg-yrci-red rounded-lg shadow border lg:border-red-600 justify-center items-center gap-2.5 inline-flex  lg:text-yrci-red text-base sm:font-bold uppercase mt-8 text-dark-teal border-dark-teal font-extrabold">Start Learning</LinkButton>
+                                <LinkButton link="https://yrciuniversity.docebosaas.com/learn/courses/45/delegated-examining-certification-preparatory-course" className="sm:w-[390px] w-full h-10 p-2.5 bg-white lg:hover:bg-yrci-red rounded-lg shadow border lg:border-red-600 justify-center items-center gap-2.5 inline-flex  lg:text-yrci-red text-base sm:font-bold mt-8 text-dark-teal border-dark-teal font-extrabold">Start Learning</LinkButton>
 
                                      {/* <LinkButton link={card.link} className='h-10 p-2.5 bg-white  rounded-lg shadow border justify-center items-center gap-2.5 inline-flex  text-base  uppercase mt-8 text-dark-teal border-dark-teal font-extrabold self-center'>start leraning</LinkButton> */}
                                      </div>

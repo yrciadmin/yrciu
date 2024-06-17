@@ -30,7 +30,7 @@ import CodyHeadShot from '../../assets/headshots/cody_headshot.jpg';
 
 const Instructors = () => {
   return (
-    <div className='bg-instructors-mobile sm:bg-instructors-tablet xl:bg-instructors bg-cover bg-center flex flex-col bg-no-repeat h-full'>
+    <div className='bg-instructors-mobile sm:bg-instructors-tablet xl:bg-yrci-red bg-cover bg-center flex flex-col bg-no-repeat h-full'>
         <div className='flex justify-center bg-instructors-title bg-center bg-cover xl:bg-none bg-no-repeat'><Heading className='capitalize mb-8 md:text-4xl self-center text-white mt-11 text-[1.5rem]'>Meet our talented instructors</Heading></div>
         <Carousel data={data}/>
         <section className='block md:hidden'>

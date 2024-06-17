@@ -21,14 +21,32 @@ const Hero = () => {
             <div className='absolute'>
                 <Metrics/>
             </div>
-            <Image
-                className='mt-8'
-                src={HeroImage}
-                alt="hero-content"
-                width={0}
-                height={0}
-                style={{height: '637px', width: '460px'}}
-            />
+            <div className="w-[560.82px] h-[627.32px] relative">
+                <div className="w-[222.54px] h-[238.55px] left-[269.23px] top-[297.32px] aspec aspec relative aspect-[4/3] shrink-0">
+                    <Image alt="YRCI University students collaborating on human resources online training program" src="https://yrci.com/wp-content/uploads/hero_stripes.png" fill={true} className='w-full h-full'/>
+                </div>
+                
+                <div className="w-[359.42px] h-[402px] aspec aspec aspect-[4/3] shrink-0  left-0 top-[194.69px] absolute rounded-[17.31px] shadow border border-neutral-400">
+                    <Image
+                    className="w-full h-full rounded-[17.31px]"
+                    alt=""
+                    fill={true}
+                    src="https://yrci.com/wp-content/uploads/AdobeStock_399213510-scaled.jpeg"
+                    />
+                </div>             
+                <div className="aspec aspec aspect-[4/3] shrink-0 ">
+                    <Image width={324.14} height={165.02} className="left-[236.68px] top-0 absolute rounded-2xl border border-neutral-700" alt="YRCI University students collaborating on human resources online training program" src="https://yrci.com/wp-content/uploads/YRCIU_Landing-Page_image-one_72-resolution.jpg" />
+                </div>
+                </div>
+            {/* <div className='aspec aspec relative mt-8 aspect-[4/3] shrink-0 h-[637px] w-[460px]'>
+                <Image
+                    src={HeroImage}
+                    alt="hero-content"
+                    width={0}
+                    height={0}
+                />
+            </div> */}
+         
         </div>
     </section>
   )

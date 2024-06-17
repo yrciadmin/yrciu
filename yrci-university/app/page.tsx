@@ -1,6 +1,7 @@
 "use client"
+import NavBar from "./NavBar";
 import Home from "./landing/page";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import React from "react";
 
 function debounce(func: (...args: any[]) => void, wait: number, immediate?: boolean): () => void {
@@ -57,6 +58,7 @@ export default function App() {
 
   return (
     <>
+    <NavBar/>
     <Home/>
      {/* <Hero/>
      <SocialProof/>
