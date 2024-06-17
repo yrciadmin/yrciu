@@ -45,6 +45,8 @@ const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
           {data.map((card, index) => (
          <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px] w-fit'>
                 <Card  icon={false} className='flex flex-col items-center  w-full xs:w-[448px] xs:h-[700px] sm:w-[448px] min-w-[348px] min-h-[519px] p-2 pb-8'>
+                <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] bg-cover w-[350px]  h-[323px] xs:h-[250px]`}></div>
+
                     <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] bg-cover w-[350px]  h-[323px] xs:h-[250px]`}></div>
                     <div className='flex flex-col justify-between'>
                         <div className='hidden justify-around mb-4 text-xs w-1/2'>
