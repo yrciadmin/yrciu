@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Inter } from "next/font/google";
 import "./globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; /* eslint-disable import/first */
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
   weight: "400"
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={` ${roboto.className}`}>
+      <body className={` ${inter.className}`}>
         <main className="yrciu">{children}</main>
       </body>
     </html>

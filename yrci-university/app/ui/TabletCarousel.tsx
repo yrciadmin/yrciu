@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from './Card';
 import LinkButton from './LinkButton';
 import Paragraph from './Typography/Paragraph';
+import Image from 'next/image';
 
 interface DataProps {
     id: number;
@@ -44,7 +45,15 @@ const TabletCarousel = ({data, button, color, num_slides}: CarouselProps) => {
              <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px]'>
             
                     <Card  icon={false} className='w-11/12 sm:w-[430px] py-8 px-5 bg-white border-2 border-light-gary flex flex-col  items-center rounded-lg m-4 sm:m-10 h-fit'>
-                        <div className={`${card.image} bg-center bg-no-repeat w-[350px]  h-[323px] bg-cover `}></div>
+                        {/* <div className={`${card.image} bg-center bg-no-repeat w-[350px]  h-[323px] bg-cover `}></div> */}
+                        <div className="w-[390px] relative h-[167px] bg-red-600/opacity-30 rounded-md shadow-inner">
+                            <Image
+                            src={card.image}
+                            alt={"title"}
+                            fill={true}
+                            className='rounded-md'
+                            />
+                        </div>
                         <div className='w-11/12 flex flex-col justify-between min-h-[465px]'>
                             <div className='hidden justify-around mb-4 text-xs w-1/2'>
                                 <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 

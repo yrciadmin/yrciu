@@ -13,7 +13,7 @@ export default function Home() {
      <SocialProof/>
      <WhyChooseUs/>
      <FeaturedCourses/>
-     <Instructors/>
+     {/* <Instructors/> */}
      <Reviews/>
      <GroupPrice/>
      {/* <ContactUs/> */}

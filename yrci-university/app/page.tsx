@@ -1,4 +1,5 @@
 "use client"
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 import Home from "./landing/page";
 import { useEffect } from "react";
@@ -60,6 +61,7 @@ export default function App() {
     <>
     <NavBar/>
     <Home/>
+    <Footer/>
      {/* <Hero/>
      <SocialProof/>
      <WhyChooseUs/>
