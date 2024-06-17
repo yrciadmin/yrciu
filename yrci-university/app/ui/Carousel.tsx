@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Card from './Card';
 import Paragraph from './Typography/Paragraph';
+import Image from 'next/image';
 
 interface DataProps {
     id: number;
@@ -36,8 +37,16 @@ const Carousel = ({ data }: CarouselProps) => {
       <div className="flex space-x-4 overflow-x-scroll sm:overflow-hidden justify-between w-full">
         <div className='flex flex-row p-5 justify-around w-full'>
             {data.slice(currentIndex, currentIndex + 2).map((card) => (
-             <Card key={card.id} icon={false} className='flex flex-col sm:flex-row sm:items-center sm:justify-around w-[350px] h-[519px] sm:w-[546px] sm:h-[395px] p-2 mr-8'>
-             <div className={`${card.image} bg-center bg-no-repeat w-[310px] h-[128px] bg-cover sm:w-[218px] sm:h-[326.38px] rounded-[13.01px]`}></div>
+             <Card key={card.id} icon={false} className='flex flex-col sm:flex-row sm:items-center sm:justify-around w-[800px] h-[519px] sm:w-[800px] sm:h-[395px] p-2 mr-8'>
+               <div className=" w-[310px] h-[128px] bg-cover mr-8 sm:h-[326.38px] rounded-[13.01px] aspec aspec aspect-[4/3] shrink-0  shadow-inner min-w-[300px] xs:h-[250px]  relative  bg-red-600/opacity-30">
+                    <Image
+                        src={card.image}
+                        alt={"title"}
+                        fill={true}
+                        className='rounded-md'
+                    />
+                </div>
+             {/* <div className={`${card.image} bg-center bg-no-repeat w-[310px] h-[128px] bg-cover sm:w-[218px] sm:h-[326.38px] rounded-[13.01px]`}></div> */}
              <div className='sm:w-1/2 flex flex-col justify-between'>
                  <div className='hidden 3xl:flex justify-around mb-4 text-xs w-1/2'>
                     <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 
