@@ -1,8 +1,8 @@
 import React from 'react'
-import Heading from '../ui/Typography/Heading'
+import Heading from '../../ui/Typography/Heading'
 import { faqs } from './data'
 import QA from './QA'
-import Paragraph from '../ui/Typography/Paragraph'
+import Paragraph from '../../ui/Typography/Paragraph'
   
 const Questions = () => {
   return (

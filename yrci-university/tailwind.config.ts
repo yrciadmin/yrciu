@@ -16,7 +16,9 @@ const config: Config = {
       ...defaultTheme.screens,
     },
     extend: {
-      
+      boxShadow: {
+        'red-shadow': '0px 4px 4px 0px rgba(205, 33, 41, 0.20)',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

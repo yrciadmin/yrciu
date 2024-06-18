@@ -10,7 +10,7 @@ import Paragraph from './Typography/Paragraph';
 import Image from 'next/image';
 
 interface DataProps {
-    id: number;
+    id?: number;
     title: string;
     image: string;
     content: string; 

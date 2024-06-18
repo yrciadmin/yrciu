@@ -23,12 +23,12 @@ const Hero = () => {
             </div>
             <div className="w-[560.82px] h-[627.32px] relative">
                 <div className="w-[222.54px] h-[238.55px] left-[269.23px] top-[297.32px] aspec aspec relative aspect-[4/3] shrink-0">
-                    <Image alt="YRCI University students collaborating on human resources online training program" src="https://yrci.com/wp-content/uploads/hero_stripes.png" fill={true} className='w-full h-full'/>
+                    <Image alt="YRCI University students collaborating on human resources online training program" src="https://yrci.com/wp-content/uploads/hero_stripes.png" fill={true} className='w-full h-full object-cover'/>
                 </div>
                 
-                <div className="w-[359.42px] h-[402px] aspec aspec aspect-[4/3] shrink-0  left-0 top-[194.69px] absolute rounded-[17.31px] shadow border border-neutral-400">
+                <div className='w-[359.42px] h-[402px] relative aspect-[4/3] shrink-0 left-0 top-0 rounded-[17.31px] shadow border border-neutral-400'>
                     <Image
-                    className="w-full h-full rounded-[17.31px]"
+                     className='w-full h-full rounded-[17.31px] object-cover' 
                     alt=""
                     fill={true}
                     src="https://yrci.com/wp-content/uploads/AdobeStock_399213510-scaled.jpeg"
