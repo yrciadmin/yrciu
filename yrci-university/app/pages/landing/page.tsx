@@ -1,4 +1,3 @@
-import React from "react";
 import ContactUs from "../../components/ContactUs";
 import FeaturedCourses from "../../components/FeaturedCourses";
 import Hero from "../../components/Hero";
@@ -11,14 +10,15 @@ import GroupPrice from "../../components/GroupPrice";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <SocialProof />
-      <WhyChooseUs />
-      <FeaturedCourses />
-      {/* <Instructors /> */}
-      <Reviews />
-      <GroupPrice />
-      {/* <ContactUs /> */}
+     <Hero/>
+     <SocialProof/>
+     <WhyChooseUs/>
+     <FeaturedCourses/>
+     {/* <Instructors/> */}
+     <Reviews/>
+     {/* <GroupPrice/> */}
+     {/* <ContactUs/> */}
     </>
+    
   );
 }
