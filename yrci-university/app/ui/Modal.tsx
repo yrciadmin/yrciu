@@ -52,8 +52,8 @@ const Modal: FC<ModalProps> = ({ show, onClose, content }) => {
                         <p className="text-sm 3xl:text-lg text-gray-600 mb-2">{item.detail}</p>
                         {item.bullets && (
                             <ul className='ml-8'>
-                                {item.bullets.map((bullet) => (
-                                    <li className='list-disc text-sm 3xl:text-base text-gray-600'>{bullet}</li>
+                                {item.bullets.map((bullet, index) => (
+                                    <li key={index} className='list-disc text-sm 3xl:text-base text-gray-600'>{bullet}</li>
                                 ))}
                             </ul>
                         )}
