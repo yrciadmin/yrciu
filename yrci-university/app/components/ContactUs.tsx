@@ -27,7 +27,7 @@ const ContactUs = () => {
                   Please read our 
                   <span
                     onClick={() => setShowModal(true)}
-                    className=" mx-2 text-[12px] xl:text-[22px] cursor-pointer text-light-gray font-semibold"
+                    className=" mx-2 text-[12px] xl:text-[16px] xxl:text-sm  3xl:text-[20px] cursor-pointer text-light-gray font-semibold"
                   >
                     Terms and Conditions
                   </span>
