@@ -21,23 +21,6 @@ const GroupPrice = () => {
           <Heading className='text-2xl xs:text-3xl sm:text-5xl self-center mb-8'>Interested in Group Rates?</Heading>
           <Paragraph className='w-full  xl:w-4/5 self-center h-168 md:text-xl md:leading-loose'>Unlock exclusive savings with our group rates. Whether you're a small team or a large organization, we provide competitive pricing options tailored to your group size. Maximize your budget and streamline your booking process with our cost-effective solutions. Contact us to learn more about how our group rates can benefit your team. </Paragraph>
       </div>
-        
-          {/* <Image
-              alt="Why choose use"
-              className='w-8/12 relative bottom-[330px] left-[80px] opacity-20  xl:block'
-              src={RightImage}
-              height={0}
-              width={0}
-          /> */}
-          {/* <div className='flex xl:flex sm:hidden xl:flex-row flex-col items-center justify-center sm:justify-around mt-8 md:overflow-y-auto xl:overflow-hidden w-8/12'>
-      <Image
-              alt="Why choose use"
-              className='w-full sm:w-2/6 hidden xl:block'
-              src={RightImage}
-              height={0}
-              width={0}
-          />
-      </div> */}
     </div>
    <ContactUs/>
 

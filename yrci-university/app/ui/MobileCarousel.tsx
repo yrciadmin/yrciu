@@ -12,7 +12,7 @@ import LinkButton from './LinkButton';
 import Image from 'next/image';
 
  interface DataProps {
-    id: number;
+    id?: number;
     title: string;
     image: string;
     content: string; 
@@ -45,9 +45,9 @@ const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
       >
           {data.map((card, index) => (
          <SwiperSlide key={index} className='flex justify-center items-center p-4 h-[600px] w-fit'>
-                <Card  icon={false} className='flex flex-col items-center  w-full xs:w-[448px] xs:h-[700px] sm:w-[448px] min-w-[348px] min-h-[519px] p-2 pb-8'>
+                <Card  icon={false} className='flex flex-col items-center  w-full xs:w-[448px] xs:h-[700px] sm:w-[448px] min-w-[348px] min-h-[585px] p-2 pb-8'>
                 {/* <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] bg-cover w-[350px]  h-[323px] xs:h-[250px]`}></div> */}
-                <div className="w-full h-32 aspec aspec  aspect-[4/3] shrink-0 rounded shadow-inner min-w-[300px] bg-cover xs:h-[250px]  relative  bg-red-600/opacity-30">
+                <div className="w-full h-32 aspec aspec  aspect-[4/3] shrink-0 rounded shadow-inner min-w-[300px] min-h-[200px] bg-cover xs:h-[250px]  relative  bg-red-600/opacity-30">
                     <Image
                         src={card.image}
                         alt={"title"}
@@ -55,7 +55,7 @@ const MobileNav = ({data, button, color, num_slides}: CarouselProps) => {
                         className='rounded-md'
                     />
                 </div>
-                    <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] bg-cover w-[350px]  h-[323px] xs:h-[250px]`}></div>
+                    {/* <div className={`${card.image} bg-center bg-no-repeat  min-w-[300px] bg-cover w-[350px]  h-[323px] xs:h-[250px]`}></div> */}
                     <div className='flex flex-col justify-between'>
                         <div className='hidden justify-around mb-4 text-xs w-1/2'>
                             <div className='w-5 text-[#FEA914]'><FontAwesomeIcon icon={faStar} /></div> 

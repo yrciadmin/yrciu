@@ -6,6 +6,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Instructors from "../components/Instructors";
 import Reviews from "../components/Reviews";
 import GroupPrice from "../components/GroupPrice";
+
 export default function Home() {
   return (
     <>

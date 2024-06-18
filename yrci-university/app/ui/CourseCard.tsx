@@ -20,14 +20,14 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
   return (
   
     // <div className="w-[900px] h-[1268.31px]grid grid-cols-1 items-stretch gap-[30px] sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 place-items-center left-0 top-[85px] absolute border-8">
-    <div className="w-[430px] h-[613px] px-5 py-[30px]  bg-white rounded-lg shadow border border-gray-200 flex-col justify-start items-start gap-[19px] inline-flex">
-      <div className="w-[390px] relative h-[167px] bg-red-600/opacity-30 rounded-md shadow-inner">
+    <div className="w-[430px] h-[675px] px-5 py-[30px]  bg-white rounded-lg shadow border border-gray-200 flex-col justify-start items-start gap-[19px] inline-flex">
+      <div className="w-[390px] relative h-[200px] min-h-[200px] rounded-md shadow-inner">
         <Image
           src={image}
           alt={"title"}
           fill={true}
-          className='rounded-md'
-        />
+          className='w-full h-full rounded-md object-cover' 
+          />
       </div>
       <div className="w-[390px] text-black text-xl font-semibold uppercase">
         {title}      
@@ -59,7 +59,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           </div>
         </div>
       </div>
-      <div className="w-[390px] text-black text-[13px] font-normal capitalize">
+      <div className="w-[390px] text-black text-[13px] font-normal">
        {content}
       </div>
       <div className="justify-start items-center gap-2.5 inline-flex">
@@ -73,8 +73,8 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
       </div>
       {/* <LinkButton link={link} className="w-[390px] text-yrci-red text-base p-2.5 bg-white rounded-lg shadow border border-yrci-red justify-center items-center gap-2.5 inline-flex">Start Learning</LinkButton> */}
 
-      <Link href={link} target='_blank' className="w-[390px] p-2.5 bg-white rounded-lg shadow border border-red-600 justify-center items-center gap-2.5 inline-flex">
-        <div className="text-red-600 text-base font-bold  uppercase">
+      <Link href={link} target='_blank' className="w-[390px] text-yrci-red hover:text-white p-2.5 bg-white rounded-lg shadow border hover:bg-yrci-red  border-yrci-red justify-center items-center gap-2.5 inline-flex">
+        <div className="text-base font-bold uppercase ">
           Start Learning
         </div>
       </Link>
