@@ -20,7 +20,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
   return (
   
     // <div className="w-[900px] h-[1268.31px]grid grid-cols-1 items-stretch gap-[30px] sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 place-items-center left-0 top-[85px] absolute border-8">
-    <div className="w-[430px] h-[675px] px-5 py-[30px]  bg-white rounded-lg shadow border border-gray-200 flex-col justify-start items-start gap-[19px] inline-flex">
+    <div className="w-[430px] h-fit px-5 py-[30px]  bg-white rounded-lg shadow border border-gray-200 flex-col justify-start items-start gap-[19px] inline-flex">
       <div className="w-[390px] relative h-[200px] min-h-[200px] rounded-md shadow-inner">
         <Image
           src={image}
@@ -29,11 +29,13 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           className='w-full h-full rounded-md object-cover' 
           />
       </div>
-      <div className="w-[390px] text-black text-xl font-semibold uppercase">
-        {title}      
-    </div>
-      <div className="w-[390px] h-[0px] border border-neutral-400"></div>
-      <div className="w-[390px] h-[81px] relative">
+      <div>
+        <div className="w-[390px] text-black text-xl font-semibold uppercase mb-4">
+            {title}      
+        </div>
+        <div className="w-[390px] h-[0px] border border-neutral-400 mb-4"></div>
+        </div>
+      <div className="w-[390px] h-[100px] min-h-[100px] relative">
         <div className="w-[390px] h-[22px] left-0 top-0 absolute">
           <div className="w-[81.11px] left-0 top-0 absolute text-neutral-400 text-[13px] font-bold capitalize">
             Time:
@@ -46,7 +48,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           <div className="w-[309px] left-[81px] top-0 absolute text-right text-black text-lg font-bold capitalize">
             {category}{" "}
           </div>
-          <div className="w-[158.76px] left-0 top-[1.31px] absolute text-neutral-400 text-[13px] font-bold  capitalize">
+          <div className="w-[158.76px] left-0 top-[1.31px] absolute text-neutral-400 text-[13px] font-bold capitalize">
             Category:
           </div>
         </div>
@@ -59,10 +61,10 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           </div>
         </div>
       </div>
-      <div className="w-[390px] text-black text-[13px] font-normal">
+      <div className="w-[390px] text-black text-[13px] h-[78px] min-h-[74px] font-normal">
        {content}
       </div>
-      <div className="justify-start items-center gap-2.5 inline-flex">
+      <div className="justify-start items-center gap-2.5 inline-flex my-4">
         <div className="w-[25px] h-[25px] bg-zinc-300/opacity-0 rounded-full border border-gray-200 flex items-center justify-center" >
             <FontAwesomeIcon icon={faStar} className='text-[12px] text-yellow-400'/>
         </div>
@@ -79,7 +81,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
         </div>
       </Link>
     </div>
-//   </div>
+
  
 
     // <div className='bg-white border-2 border-light-gray flex flex-col rounded-lg p-5 w-[430px] h-[613px] 3xl:w-[447px] 4xl:w-[547px]'>
