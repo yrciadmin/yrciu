@@ -1,12 +1,12 @@
 import React from 'react'
-import InfiniteScroll from '../ui/InfiniteScroll'
+import InfiniteScroll from '../app/ui/InfiniteScroll'
 import Image from 'next/image'
-import AmericorpsLogo from '../../assets/logos/Americorps.png'
-import USDAARSLogo from '../../assets/logos/USDA-ARS_white.png'
-import CommerceLogo from '../../assets/logos/Department-of-commerce.png'
-import NOAALogo from '../../assets/logos/NOAA_white.png'
-import TrademarkLogo from '../../assets/logos/US_Patent_and_Trademark_Office_black and white.png'
-import Heading from '../ui/Typography/Heading'
+import AmericorpsLogo from '../assets/logos/Americorps.png'
+import USDAARSLogo from '../assets/logos/USDA-ARS_white.png'
+import CommerceLogo from '../assets/logos/Department-of-commerce.png'
+import NOAALogo from '../assets/logos/NOAA_white.png'
+import TrademarkLogo from '../assets/logos/US_Patent_and_Trademark_Office_black and white.png'
+import Heading from '../app/ui/Typography/Heading'
 
 const images = [
   {src: `${AmericorpsLogo}`, name: "Ameri Corp"},

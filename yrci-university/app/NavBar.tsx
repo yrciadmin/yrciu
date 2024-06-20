@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { navItems, NavItem, topNavItems } from "./util/data";
+import { navItems, NavItem, topNavItems } from "../util/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,

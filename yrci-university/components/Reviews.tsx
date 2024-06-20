@@ -1,8 +1,8 @@
 import React from 'react'
-import Heading from '../ui/Typography/Heading'
-import Paragraph from '../ui/Typography/Paragraph'
-import ReviewsCarouselMobile from '../ui/ReviewsCarouselMobile'
-import ReviewsCarousel from '../ui/ReviewsCarousel'
+import Heading from '../app/ui/Typography/Heading'
+import Paragraph from '../app/ui/Typography/Paragraph'
+import ReviewsCarouselMobile from '../app/ui/ReviewsCarouselMobile'
+import ReviewsCarousel from '../app/ui/ReviewsCarousel'
 
 const data = [
     {id: 1, value: "INVALUABLE", content: `This course should TRUMP the courses given by the “Other” company (GS).  It is far more interactive and prepares you for the real exam.`, title: `DE Test Prep`},

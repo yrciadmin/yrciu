@@ -58,9 +58,8 @@ export default function App() {
 
   return (
     <>
-    <NavBar/>
+    {/* <NavBar/> */}
     <Home/>
-    <Footer/>
      {/* <Hero/>
      <SocialProof/>
      <WhyChooseUs/>

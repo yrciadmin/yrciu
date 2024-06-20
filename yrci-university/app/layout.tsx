@@ -3,6 +3,8 @@ import { Roboto, Inter } from "next/font/google";
 import "./globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 config.autoAddCss = false; /* eslint-disable import/first */
 
 const inter = Inter({
@@ -24,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${inter.className}`}>
-        <main className="yrciu">{children}</main>
+        <NavBar/>
+          <main className="yrciu">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
