@@ -10,12 +10,16 @@ const config: Config = {
   theme: {
     screens: {
       'xs': '475px',
+      'lgr': '1100px',
       'xxl': '1400px',
       '3xl': '2000px',
       '4xl': '3000px',
       ...defaultTheme.screens,
     },
     extend: {
+      fontSize: {
+        'fluid-text-6xl': 'clamp(2.565784513950348rem, calc(2.565784513950348rem + ((4.478975999999999 - 2.565784513950348) * ((100vw - 20rem) / (96 - 20)))), 4.478975999999999rem)',
+      },
       boxShadow: {
         'red-shadow': '0px 4px 4px 0px rgba(205, 33, 41, 0.20)',
       },

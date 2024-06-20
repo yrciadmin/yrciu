@@ -6,11 +6,11 @@ import WCUImage from './../../assets/why-choose-us-image-left.png';
 import RightImage from './../../assets/pricing.png';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Card from '../ui/Card';
-import ExpandableCard from '../ui/ExpandableCard';
-import LinkButton from '../ui/LinkButton';
-import Heading from '../ui/Typography/Heading';
-import Paragraph from '../ui/Typography/Paragraph';
+import Card from '../app/ui/Card';
+import ExpandableCard from '../app/ui/ExpandableCard';
+import LinkButton from '../app/ui/LinkButton';
+import Heading from '../app/ui/Typography/Heading';
+import Paragraph from '../app/ui/Typography/Paragraph';
 import ContactUs from './ContactUs';
 
 const GroupPrice = () => {

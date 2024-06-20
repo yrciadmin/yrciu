@@ -1,8 +1,8 @@
 import React from 'react'
-import Heading from '../ui/Typography/Heading'
-import CourseCard from '../ui/CourseCard'
-import MobileCarousel from '../ui/MobileCarousel'
-import TabletCarousel from '../ui/TabletCarousel'
+import Heading from '../app/ui/Typography/Heading'
+import CourseCard from '../app/ui/CourseCard'
+import MobileCarousel from '../app/ui/MobileCarousel'
+import TabletCarousel from '../app/ui/TabletCarousel'
 
 const data = [
   {  title: 'DELEGATED EXAMINING CERTIFICATION PREPARATORY COURSE', image: "https://yrci.com/wp-content/uploads/prep.jpg", link: `https://www.yrciuniversity.com/learn/courses/45/delegated-examining-certification-preparatory-course`, time: '12hrs', category: 'Virtual Instructor, Exam Simulation', cost: '1200.00', content: 'Pass the DE Certification Exam with our prep course designed to guide participants through a variety of DEU scenarios and effective study techniques. Engage in hands-on activities and carefully crafted practice quizzes to solidify your grasp of essential DEU concepts.' },
@@ -28,7 +28,7 @@ const FeaturedCourses: React.FC = () => {
      <div className='md:block hidden lg:hidden'>
         <TabletCarousel color={'#134d61'} button data={data} num_slides={1.5} />
       </div>
-      <div className='hidden lg:grid grid-cols-1 items-stretch gap-[30px] sm:grid-cols-1 md:grid-cols-2  place-items-center lg:w-full 4xl:w-5/12 3xl:mx-auto 2xl:pb-60'>
+      <div className='hidden lg:grid grid-cols-1 items-stretch gap-[30px] sm:grid-cols-1 md:grid-cols-2 xl:grid-col-3 place-items-center lg:w-full 4xl:w-5/12 3xl:mx-auto 2xl:pb-60'>
         {data.map(course => (
           <CourseCard key={course.title} {...course} />
         ))}

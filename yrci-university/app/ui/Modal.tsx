@@ -2,7 +2,7 @@
 'use client';
 
 import { FC, useRef, useEffect } from 'react';
-import { TermConditionProps } from '../util/data';
+import { TermConditionProps } from '../../util/data';
 
 interface ModalProps {
   show: boolean;
@@ -36,8 +36,8 @@ const Modal: FC<ModalProps> = ({ show, onClose, content }) => {
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
       <div ref={modalRef} className="bg-turquise-shadow rounded-lg shadow-xl w-11/12 md:w-9/12 max-h-full py-8 overflow-hidden">
-        <div className="p-4 overflow-y-auto max-h-[80vh] w-11/12 mx-auto bg-white px-8">
-                <h3 className="text-sm 3xl:text-md mb-2">Terms and Conditions - YRCI University</h3>
+        <div className="p-4 overflow-y-auto max-h-[80vh] w-11/12 mx-auto bg-white shadow-lg px-8">
+                <h3 className="text-sm 3xl:text-md mb-2 text-center">Terms and Conditions - YRCI University</h3>
                 <h2 className="text-lg font-semibold mb-4 text-center 3xl:text-2xl">
                     Welcome to YRCI University's E-commerce Website
                 </h2>

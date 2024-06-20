@@ -1,18 +1,18 @@
 import Image from 'next/image';
-import WCUImage from './../../assets/why-choose-us-image-left.png';
+import WCUImage from './../assets/why-choose-us-image-left.png';
 import RightImage from './../../assets/pricing.png';
 
-import Heading from '../ui/Typography/Heading';
-import Button from '../ui/Button';
-import Paragraph from '../ui/Typography/Paragraph';
-import Card from '../ui/Card';
-import Icon from '../../assets/icons/card_icon1.png';
-import Icon2 from '../../assets/icons/card_icon2.png';
-import Icon3 from '../../assets/icons/card_icon3.png';
+import Heading from '../app/ui/Typography/Heading';
+import Button from '../app/ui/Button';
+import Paragraph from '../app/ui/Typography/Paragraph';
+import Card from '../app/ui/Card';
+import Icon from '../assets/icons/card_icon1.png';
+import Icon2 from '../assets/icons/card_icon2.png';
+import Icon3 from '../assets/icons/card_icon3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import ExpandableCard from '../ui/ExpandableCard';
-import LinkButton from '../ui/LinkButton';
+import ExpandableCard from '../app/ui/ExpandableCard';
+import LinkButton from '../app/ui/LinkButton';
 
 const WhyChooseUs = () => {
   return (
