@@ -1,5 +1,5 @@
-"use client"
-import { useState } from "react";
+"use client";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { navItems, NavItem, topNavItems } from "../util/data";
@@ -12,15 +12,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  const [topNavDropdownOpen, setTopNavDropdownOpen] = useState<number | null>(
-    null,
-  );
+  const [topNavDropdownOpen, setTopNavDropdownOpen] = useState<number | null>(null);
   const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
-  const [submenuOpen, setSubmenuOpen] = useState<number | null>(null);
+  const [submenuOpen, setSubmenuOpen] = useState<{ [key: number]: number | null }>({});
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+
+  const dropdownRef = useRef<HTMLUListElement | null>(null);
+  const submenuRefs = useRef<{ [key: number]: HTMLUListElement | null }>({});
 
   const handleTopNavMouseEnter = (index: number) => {
     setTopNavDropdownOpen(index);
+    setDropdownOpen(null); // Close other dropdown
   };
 
   const handleTopNavMouseLeave = () => {
@@ -29,22 +31,54 @@ const NavBar = () => {
 
   const handleMouseEnter = (index: number) => {
     setDropdownOpen(index);
+    setTopNavDropdownOpen(null); // Close other dropdown
   };
 
   const handleMouseLeave = () => {
-    setDropdownOpen(null);
+    if (!dropdownRef.current?.matches(":hover")) {
+      setDropdownOpen(null);
+      setSubmenuOpen({});
+    }
   };
 
-  const handleSubmenuMouseEnter = (index: number) => {
-    setSubmenuOpen(index);
+  const handleSubmenuMouseEnter = (parentIndex: number, index: number) => {
+    setSubmenuOpen((prevState) => ({
+      ...prevState,
+      [parentIndex]: index
+    }));
   };
 
-  const handleSubmenuMouseLeave = () => {
-    setSubmenuOpen(null);
+  const handleSubmenuMouseLeave = (parentIndex: number) => {
+    setSubmenuOpen((prevState) => ({
+      ...prevState,
+      [parentIndex]: null
+    }));
   };
 
   const handleMobileMenu = () => {
     setMobileNavOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    const handleDocumentClick = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        !Object.values(submenuRefs.current).some(ref => ref?.contains(event.target as Node))
+      ) {
+        setDropdownOpen(null);
+        setSubmenuOpen({});
+      }
+    };
+
+    document.addEventListener("click", handleDocumentClick);
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
+
+  const setSubmenuRef = (index: number) => (el: HTMLUListElement | null) => {
+    submenuRefs.current[index] = el;
   };
 
   return (
@@ -58,6 +92,7 @@ const NavBar = () => {
                   key={index}
                   className="relative"
                   onMouseEnter={() => handleTopNavMouseEnter(index)}
+                  // onMouseLeave={handleTopNavMouseLeave}
                 >
                   <button
                     className="text-gray-700 hover:text-yrci-red focus:outline-none text-lg font-[600]"
@@ -71,7 +106,7 @@ const NavBar = () => {
                   </button>
                   {topNavDropdownOpen === index && (
                     <ul
-                      onMouseEnter={() => setTopNavDropdownOpen(index)}
+                      ref={dropdownRef}
                       onMouseLeave={handleTopNavMouseLeave}
                       className="absolute mt-2 w-60 bg-white shadow-lg left-[-33px] top-[36px] pl-2 pt-4 h-fit flex flex-col justify-evenly z-[9999] text-[20px] font-[600] border-t-2 border-t-yrci-red"
                     >
@@ -80,12 +115,13 @@ const NavBar = () => {
                           key={linkIndex}
                           className="relative my-2 ml-2 p-2 hover:bg-light-gray hover:text-yrci-red"
                           onMouseEnter={() =>
-                            link.submenu && handleTopNavMouseEnter(linkIndex)
+                            link.submenu && handleSubmenuMouseEnter(index, linkIndex)
                           }
+                          onMouseLeave={() => link.submenu && handleSubmenuMouseLeave(index)}
                         >
                           <Link
                             href={link.link}
-                            className="capitalize transition-colors duration-300 flex items-center"
+                            className="capitalize transition-colors duration-300 flex items-center bold-text"
                           >
                             {link.name}
                             {link.submenu && (
@@ -95,6 +131,27 @@ const NavBar = () => {
                               />
                             )}
                           </Link>
+                          {submenuOpen[index] === linkIndex && link.submenu && (
+                            <ul
+                              ref={setSubmenuRef(index)}
+                              onMouseLeave={() => handleSubmenuMouseLeave(index)}
+                              className="absolute mt-0 ml-4 w-60 left-[-272px] bg-white shadow-lg top-[-26px] pl-2 h-fit flex flex-col justify-evenly z-[9999] text-[16px] font-[600] border-t-2 border-t-yrci-red"
+                            >
+                              {link.submenu.map((sublink, sublinkIndex) => (
+                                <li
+                                  key={sublinkIndex}
+                                  className="my-2 ml-2 p-2 hover:bg-light-gray"
+                                >
+                                  <Link
+                                    href={sublink.link}
+                                    className="capitalize hover:bg-light-gray transition-colors duration-300"
+                                  >
+                                    {sublink.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -119,6 +176,7 @@ const NavBar = () => {
                   key={index}
                   className="relative"
                   onMouseEnter={() => handleMouseEnter(index)}
+                  // onMouseLeave={handleMouseLeave}
                 >
                   <button
                     className="text-gray-700 hover:text-yrci-red focus:outline-none text-lg font-[600]"
@@ -132,18 +190,19 @@ const NavBar = () => {
                   </button>
                   {dropdownOpen === index && (
                     <ul
-                      onMouseEnter={() => setDropdownOpen(index)}
-                      onMouseLeave={handleMouseLeave}
+                      ref={dropdownRef}
                       className="absolute mt-2 w-60 bg-white shadow-lg top-[54px] pl-2 pt-4 h-fit flex flex-col justify-evenly z-[9999] text-[20px] font-[600] border-t-2 border-t-yrci-red"
                       style={{ left: -140 }}
+                      onMouseLeave={handleMouseLeave}
                     >
                       {item.links.map((link, linkIndex) => (
                         <li
                           key={linkIndex}
-                          className="relative my-2 ml-2 p-2 hover:bg-light-gray hover:text-yrci-red"
+                          className="relative my-2 p-2 hover:bg-light-gray hover:text-yrci-red"
                           onMouseEnter={() =>
-                            link.submenu && handleSubmenuMouseEnter(linkIndex)
+                            link.submenu && handleSubmenuMouseEnter(index, linkIndex)
                           }
+                          onMouseLeave={() => link.submenu && handleSubmenuMouseLeave(index)}
                         >
                           <Link
                             href={link.link}
@@ -157,13 +216,11 @@ const NavBar = () => {
                               />
                             )}
                           </Link>
-                          {submenuOpen === linkIndex && link.submenu && (
+                          {submenuOpen[index] === linkIndex && link.submenu && (
                             <ul
-                              className="absolute mt-0 ml-4 w-60 left-[-272px] bg-white shadow-lg top-[-26px] pl-2 h-fit flex flex-col justify-evenly z-[9999] text-[16px] font-[600] border-t-2 border-t-yrci-red"
-                              onMouseEnter={() =>
-                                handleSubmenuMouseEnter(linkIndex)
-                              }
-                              onMouseLeave={handleSubmenuMouseLeave}
+                              ref={setSubmenuRef(index)}
+                              onMouseLeave={() => handleSubmenuMouseLeave(index)}
+                              className="absolute mt-0 ml-4 w-60 left-[-256px] bg-white shadow-lg top-[-26px] pl-2 h-fit flex flex-col justify-evenly z-[9999] text-[16px] font-[600] border-t-2 border-t-yrci-red"
                             >
                               {link.submenu.map((sublink, sublinkIndex) => (
                                 <li
@@ -172,7 +229,7 @@ const NavBar = () => {
                                 >
                                   <Link
                                     href={sublink.link}
-                                    className="capitalize  hover:bg-light-gray transition-colors duration-300"
+                                    className="capitalize hover:bg-light-gray transition-colors duration-300"
                                   >
                                     {sublink.name}
                                   </Link>
@@ -242,14 +299,14 @@ const NavBar = () => {
                               className="ml-8 text-[12px] mr-4"
                               icon={faChevronDown}
                               onClick={() =>
-                                submenuOpen === linkIndex
-                                  ? setSubmenuOpen(null)
-                                  : setSubmenuOpen(linkIndex)
+                                submenuOpen[index] === linkIndex
+                                  ? handleSubmenuMouseLeave(index)
+                                  : handleSubmenuMouseEnter(index, linkIndex)
                               }
                             />
                           )}
                         </div>
-                        {submenuOpen === linkIndex && link.submenu && (
+                        {submenuOpen[index] === linkIndex && link.submenu && (
                           <ul className="mt-0 w-full left-[-272px] bg-[#EFEFEF] top-[-26px] pl-2 h-fit flex flex-col justify-evenly z-[9999] text-[16px] font-[600]">
                             {link.submenu.map((sublink, sublinkIndex) => (
                               <li

@@ -28,7 +28,7 @@ const FeaturedCourses: React.FC = () => {
      <div className='md:block hidden lg:hidden'>
         <TabletCarousel color={'#134d61'} button data={data} num_slides={1.5} />
       </div>
-      <div className='hidden lg:grid grid-cols-1 items-stretch gap-[30px] sm:grid-cols-1 md:grid-cols-2 xl:grid-col-3 place-items-center lg:w-full 4xl:w-5/12 3xl:mx-auto 2xl:pb-60'>
+      <div className='hidden lg:grid grid-cols-1 items-stretch gap-[30px] md:grid-cols-2 lg:grid-cols-3 place-items-center lg:w-full  3xl:mx-auto 2xl:pb-60'>
         {data.map(course => (
           <CourseCard key={course.title} {...course} />
         ))}
