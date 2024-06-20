@@ -16,7 +16,7 @@ const instructors: Instructor[] = [
 const Instructors: React.FC = () => {
   return (
     <section className="px-[16px] pt-[1vmax] pb-[6.6vmax] md:px-[4vw]">
-      <h1 className="mb-[60px] text-2xl sm:text-6xl text-center font-bold">Meet our talented instructors</h1>
+      <h1 className="mb-[60px] text-3xl sm:text-6xl text-center font-bold">Meet our talented instructors</h1>
       <div className="grid grid-cols-1 items-stretch gap-[20px] sm:grid-cols-2 md:grid-cols-3 lgr:grid-cols-5">
         {instructors.map((instructor) => (
           <Link 
