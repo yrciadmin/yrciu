@@ -77,17 +77,17 @@ const Input: React.FC<InputProps> = ({ formData, handleChange, handleSubmit }) =
           onChange={handleChange}
         />
       </div>
-      <div className='flex w-11/12 md:w-[449px] justify-between'>
-        <div className='items-center flex justify-end'>
+      <div className='flex flex-col sm:flex-row w-11/12 md:w-[449px] justify-between'>
+        <div className='items-center flex sm:justify-end'>
           <input
             type="checkbox"
             className="form-checkbox h-5 w-5 text-dark-teal"
             checked={checked}
             onChange={handleCheckboxChange}
           />
-          <span className="ml-2 text-dark-teal text-lg">Group rates?</span>
+          <span className="ml-2 text-white text-lg">Interested in Group Rates?</span>
         </div>
-        <Button className='w-[155px] h-[52px] bg-red-600 rounded-lg shadow text-white self-end'>Submit</Button>
+        <Button className='w-full mt-8 sm:mt-0 sm:w-[155px] h-[52px] bg-red-600 rounded-lg shadow text-white self-end font-bold'>Submit</Button>
       </div>
     </form>
   )

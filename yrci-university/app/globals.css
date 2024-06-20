@@ -26,6 +26,10 @@ body {
   }
 }
 
+.bold-text {
+  font-weight: 700;
+}
+
 .starIcon {
   color: yellow;
 }

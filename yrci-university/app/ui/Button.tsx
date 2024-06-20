@@ -10,7 +10,7 @@ interface ButtonProps {
     return (
       <button
         onClick={onClick}
-        className={twMerge(`font-bold py-2 px-4 rounded w-6/12 sm:w-44, ${className}`)}
+        className={twMerge(`font-semibold py-2 px-4 rounded w-6/12 sm:w-44, ${className}`)}
       >
         {children}
       </button>

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Roboto, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import "animate.css";
 config.autoAddCss = false; /* eslint-disable import/first */
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: "400"
+  weight: ["400", "600", "700"]
 });
 
 export const metadata: Metadata = {

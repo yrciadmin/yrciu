@@ -21,7 +21,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
   
     // <div className="w-[900px] h-[1268.31px]grid grid-cols-1 items-stretch gap-[30px] sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 place-items-center left-0 top-[85px] absolute border-8">
     <div className="w-[430px] h-fit px-5 py-[30px]  bg-white rounded-lg shadow border border-gray-200 flex-col justify-start items-start gap-[19px] inline-flex">
-      <div className="w-[390px] relative h-[200px] min-h-[200px] rounded-md shadow-inner">
+      <div className="w-[390px] relative h-[200px] min-h-[200px] rounded-md shadow-inner border-2">
         <Image
           src={image}
           alt={"title"}
@@ -30,7 +30,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           />
       </div>
       <div>
-        <div className="w-[390px] text-black text-xl font-semibold uppercase mb-4">
+        <div className="w-[390px] h-16 min-h-16 text-black text-xl flex items-center font-semibold uppercase mb-8">
             {title}      
         </div>
         <div className="w-[390px] h-[0px] border border-neutral-400 mb-4"></div>
@@ -40,12 +40,12 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           <div className="w-[81.11px] left-0 top-0 absolute text-neutral-400 text-[13px] font-bold capitalize">
             Time:
           </div>
-          <div className="w-[160.49px] left-[229.51px] top-0 absolute text-right text-black text-lg font-bold capitalize">
+          <div className="w-[160.49px] left-[229.51px] top-0 absolute text-right text-black text-lg font-semibold capitalize">
             {time}
           </div>
         </div>
         <div className="w-[390px] h-[22px] left-0 top-[28.69px] absolute">
-          <div className="w-[309px] left-[81px] top-0 absolute text-right text-black text-lg font-bold capitalize">
+          <div className="w-[309px] left-[81px] top-0 absolute text-right text-black text-lg font-semibold capitalize">
             {category}{" "}
           </div>
           <div className="w-[158.76px] left-0 top-[1.31px] absolute text-neutral-400 text-[13px] font-bold capitalize">
@@ -53,7 +53,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
           </div>
         </div>
         <div className="w-[390px] h-[22px] left-0 top-[59px] absolute">
-          <div className="w-[113.89px] left-[276.11px] top-0 absolute text-right text-red-600 text-lg font-bold capitalize">
+          <div className="w-[113.89px] left-[276.11px] top-0 absolute text-right text-red-600 text-lg font-semibold capitalize">
             {cost}
           </div>
           <div className="w-[158.76px] left-0 top-0 absolute text-neutral-400 text-[13px] font-bold capitalize">
@@ -75,8 +75,8 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, image, link, time, categ
       </div>
       {/* <LinkButton link={link} className="w-[390px] text-yrci-red text-base p-2.5 bg-white rounded-lg shadow border border-yrci-red justify-center items-center gap-2.5 inline-flex">Start Learning</LinkButton> */}
 
-      <Link href={link} target='_blank' className="w-[390px] text-yrci-red hover:text-white p-2.5 bg-white rounded-lg shadow border hover:bg-yrci-red  border-yrci-red justify-center items-center gap-2.5 inline-flex">
-        <div className="text-base font-bold uppercase ">
+      <Link href={link} target='_blank' className="w-[390px] shadow-lg shadow-red-shadow text-yrci-red hover:text-white p-2.5 bg-white rounded-lg  border hover:bg-yrci-red  border-yrci-red justify-center items-center gap-2.5 inline-flex">
+        <div className="text-base uppercase ">
           Start Learning
         </div>
       </Link>
