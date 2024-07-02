@@ -1,10 +1,10 @@
 "use client"
 import { useState, ChangeEvent, FormEvent } from 'react';
-import Heading from '../app/ui/Typography/Heading';
-import Input from '../app/ui/Forms/Input';
-import Paragraph from '../app/ui/Typography/Paragraph';
-import Modal from '../app/ui/Modal';
-import { termsAndConditions } from '../util/data';
+import Heading from '../ui/Typography/Heading';
+import Input from '../ui/Forms/Input';
+import Paragraph from '../ui/Typography/Paragraph';
+import Modal from '../ui/Modal';
+import { termsAndConditions } from '../../util/data';
 
 interface FormData {
   firstName: string;
@@ -36,19 +36,20 @@ const ContactUs = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
+
     const res = await fetch('/api/send-email', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     });
 
     if (res.ok) {
       setSubmitted(true);
       setFormData({ firstName: '', lastName: '', email: '', employer: '', groupRates: false });
     } else {
-      console.log("error")
+      console.error('Error submitting form');
     }
   };
 
@@ -63,7 +64,7 @@ const ContactUs = () => {
 
           <div className='mt-8 xs:mt-2 sm:mt-0 flex justify-center items-center w-full'>
             {submitted ? (
-              <p className="text-green-500">Thank you for your message!</p>
+              <p className="text-white text-xl font-bold">Thank you for your message!</p>
             ) : (
               <Input
                 formData={formData}
@@ -79,7 +80,7 @@ const ContactUs = () => {
               Please read our 
               <span
                 onClick={() => setShowModal(true)}
-                className="mx-2 text-[14px] cursor-pointer text-light-gray font-semibold"
+                className="mx-2 text-[14px] cursor-pointer font-semibold"
               >
                 Terms and Conditions
               </span>

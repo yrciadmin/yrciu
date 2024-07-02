@@ -1,18 +1,18 @@
 "use client"
 import Image from 'next/image';
-import WCUImage from './../assets/why-choose-us-image-left.png';
+import WCUImage from './../../assets/why-choose-us-image-left.png';
 
-import Heading from '../app/ui/Typography/Heading';
-import Button from '../app/ui/Button';
-import Paragraph from '../app/ui/Typography/Paragraph';
-import Card from '../app/ui/Card';
-import Icon from '../assets/icons/card_icon1.png';
-import Icon2 from '../assets/icons/card_icon2.png';
-import Icon3 from '../assets/icons/card_icon3.png';
+import Heading from '../ui/Typography/Heading';
+import Button from '../ui/Button';
+import Paragraph from '../ui/Typography/Paragraph';
+import Card from '../ui/Card';
+import Icon from '../../assets/icons/card_icon1.png';
+import Icon2 from '../../assets/icons/card_icon2.png';
+import Icon3 from '../../assets/icons/card_icon3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import ExpandableCard from '../app/ui/ExpandableCard';
-import LinkButton from '../app/ui/LinkButton';
+import ExpandableCard from '../ui/ExpandableCard';
+import LinkButton from '../ui/LinkButton';
 import { motion } from 'framer-motion';
 
 const slideInFromBottom = {
@@ -80,14 +80,14 @@ const WhyChooseUs = () => {
                 <motion.div
                     variants={slideInFromBottom}
                 >
-                    <Card icon icon_img={Icon2} title="Shape your Career" className='bg-[#F5D3D4] h-[380.05px] xl:h-[370.05px]  lg:w-[30%] xl:w-[370px]  2xl:h-[390.05px]   xl:mx-0 p-4 border-yrci-red mb-8 sm:mb-0 ' iconClassName='bg-yrci-red'>
+                    <Card icon icon_img={Icon2} title="Shape your Career" className='bg-[#F5D3D4] h-[380.05px] xl:h-[370.05px] xl:w-[370px] 2xl:h-[390.05px] xl:mx-0 p-4 border-yrci-red mb-8 sm:mb-0 shadow-2xl shadow-red-shadow' iconClassName='bg-yrci-red'>
                         <Paragraph className='mt-4 text-sm 2xl:text-lg leading-loose'>Whether you're vying for a promotion within your current organization or seeking new career opportunities, our certification training programs can help you achieve your career goals. Elevate your skill set, gain credentials, and pave the way for career advancement. </Paragraph>
                     </Card>
                 </motion.div>
                 <motion.div
                     variants={slideInFromBottom}
                 >
-                    <Card icon icon_img={Icon3} title="Support your Organization" className='bg-[#DCEAEC] h-[380.05px] xl:h-[370.05px] 2xl:h-[390.05px]  lg:w-[30%]  xl:w-[370px]  xl:mx-0 p-4 border-muted-turquise  shadow-2xl shadow-turquise-shadow mb-8 sm:mb-0 overflow-hidden' iconClassName='bg-muted-turquise'>
+                    <Card icon icon_img={Icon3} title="Support your Organization" className='bg-[#DCEAEC] h-[380.05px] xl:h-[370.05px] 2xl:h-[390.05px] xl:w-[370px]  xl:mx-0 p-4 border-muted-turquise mb-8 sm:mb-0  shadow-2xl shadow-turquise-shadow' iconClassName='bg-muted-turquise'>
                         <Paragraph className='mt-4 text-sm 2xl:text-lg leading-loose'>HR professionals play a critical role in supporting the operations and strategic objectives of their organizations. By equipping yourself with the skills and knowledge needed to navigate the evolving HR landscape, you'll be better prepared to address the challenges and opportunities facing your organization.</Paragraph>
                     </Card>
                 </motion.div>

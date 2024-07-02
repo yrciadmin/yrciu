@@ -163,11 +163,12 @@ const NavBar = () => {
         </div>
         <div className="w-full px-12 md:px-4 md:border-t-2 md:border-t-black">
           <div className="flex justify-between items-center py-4">
-            <div className=" h-[68px] aspec aspec relative aspect-[4/3] shrink-0">
+            <div className=" w-[59px] h-[38px] md:h-[82px] md:w-[123px] relative aspect-[4/3] md:ml-7">
               <Image
-                src={`https://yrci.com/wp-content/uploads/yrci-logo.png`}
+                src={`https://yrci.com/wp-content/uploads/YRCI_logo_rectangle.png`}
                 alt="yrci-logo"
                 fill={true}
+                className="h-auto"
               />
             </div>
             <nav className="hidden md:flex space-x-8">

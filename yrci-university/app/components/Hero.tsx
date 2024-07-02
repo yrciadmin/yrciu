@@ -1,9 +1,9 @@
-import Button from '../app/ui/Button'
+import Button from '../ui/Button'
 import Image from 'next/image'
 import HeroImage from '../../assets/hero-right-content.png'
 import Metrics from './Metrics'
-import Paragraph from '../app/ui/Typography/Paragraph'
-import LinkButton from '../app/ui/LinkButton'
+import Paragraph from '../ui/Typography/Paragraph'
+import LinkButton from '../ui/LinkButton'
 
 //TODO: CREATE DESIGN FOR MOBILE METRICS SECTION
 const Hero = () => {

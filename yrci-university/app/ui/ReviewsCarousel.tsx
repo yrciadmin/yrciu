@@ -77,7 +77,7 @@ const Carousel = ({ data, num_slides }: CarouselProps) => {
                   <div className="w-[298px] h-[52px] left-0 top-[35px] absolute text-white text-[45px] font-bold font-['Work Sans'] leading-[30.18px] uppercase">{item.value}</div>
                   <div className="w-[25px] h-[25px] left-0 top-0 absolute rounded-lg flex-col justify-start items-start inline-flex" />
                 </div> */}
-                <div className="w-11/12 h-[69px] left-[17px] top-[487px] absolute text-white text-xl font-semibold font-['Work Sans'] uppercase ">
+                <div className="w-11/12 h-[69px] left-[17px] top-[487px] absolute text-white text-xl font-semibold pr-4 font-['Work Sans'] uppercase ">
                   {item.title}
                 </div>
                 <div className="w-[87px] h-[22px] left-[17px] top-[465px] absolute text-yrci-blaxk text-lg font-semibold font-['Work Sans'] uppercase">Course</div>
