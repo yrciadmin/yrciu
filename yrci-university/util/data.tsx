@@ -27,6 +27,7 @@ export interface NavLink {
         { name: "Who We Are", link: "https://yrci.com/who-we-are/" },
         { name: "Our Approach", link: "https://yrci.com/our-approach/" },
         { name: "Leadership", link: "https://yrci.com/leadership/" },
+        { name: "News & Press Releases", link: "https://yrci.com/news/" },
       ],
     },
     {
