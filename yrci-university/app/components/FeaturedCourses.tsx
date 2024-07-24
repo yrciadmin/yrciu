@@ -20,7 +20,7 @@ const FeaturedCourses: React.FC = () => {
   return (
     <section className='bg-featured-courses bg-cover bg-center mt-32 flex flex-col px-4 pt-4 pb-16 md:px-16 w-full h-full'>
       <div className='flex my-16 h-20 justify-center bg-dark-teal sm:bg-transparent text-white sm:text-black'>
-        <Heading className='text-[2.5rem] sm:text-[56px] self-center'>Featured Courses</Heading>
+        <Heading className='text-[2rem] sm:text-[56px] self-center'>Featured Courses</Heading>
       </div>
       <div className='block md:hidden'>
         <MobileCarousel color={'#134d61'} button data={data} />
