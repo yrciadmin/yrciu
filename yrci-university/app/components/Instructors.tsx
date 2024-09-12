@@ -19,13 +19,13 @@ const Instructors: React.FC = () => {
   return (
     <section className="px-[16px] pt-[1vmax] pb-[6.6vmax] md:px-[4vw]">
       <h1 className="mb-[60px] text-3xl sm:text-6xl text-center font-bold">Meet our talented instructors</h1>
-      <div className="grid grid-cols-1 items-stretch gap-[20px] sm:grid-cols-2 md:grid-cols-3 lgr:grid-cols-5">
+      <div className="grid grid-cols-1 sm:grid-rows-2 items-stretch gap-[28px] sm:grid-cols-2 md:grid-cols-4">
         {instructors.map((instructor) => (
           <Link 
             key={instructor.id} 
             href={`/instructors/${instructor.id}`} 
             passHref 
-            className="flex flex-col rounded-b-[5px] bg-white text-black no-underline shadow-[0px_0px_5px_rgba(0,0,0,.15)] hover:no-underline"
+            className="flex flex-col rounded-b-[5px] bg-white text-black no-underline shadow-[0px_0px_5px_rgba(0,0,0,.15)] hover:no-underline mb-8"
           >
               <div className='relative mb-[9%] aspect-[4/3] shrink-0'>
                 <Image className="absolute h-full w-full object-cover" fill={true} src={instructor.image} alt={`${instructor.title}`} />
